@@ -16,6 +16,8 @@ footer: Copyright © 2018-present Digital Media and IT - NAIT
 ---
 # DMIT-2018.github.io
 
+[![Build Status](https://travis-ci.org/DMIT-2018/DMIT-2018.github.io.svg?branch=dev)](https://travis-ci.org/DMIT-2018/DMIT-2018.github.io)
+
 ::: warning NOTE: Notice of Disclaimer!
 This site is under construction.
 At present, it does ***NOT*** represent official course material. Official course material can be found on the [Moodle website](https://moodle.nait.ca) for the course.
