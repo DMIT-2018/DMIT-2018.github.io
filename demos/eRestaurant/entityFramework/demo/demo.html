@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Entity Framework Demo | DMIT-2018 Student Notes</title>
+    <meta name="description" content="Intermediate Application Development">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.0bd7a5d6.css" as="style"><link rel="preload" href="/assets/js/app.7e06185b.js" as="script"><link rel="preload" href="/assets/js/43.d5cf75c2.js" as="script"><link rel="prefetch" href="/assets/js/1.fe732339.js"><link rel="prefetch" href="/assets/js/2.725584c3.js"><link rel="prefetch" href="/assets/js/3.9bb80258.js"><link rel="prefetch" href="/assets/js/4.07be255d.js"><link rel="prefetch" href="/assets/js/5.b123ba8e.js"><link rel="prefetch" href="/assets/js/6.33b3f99e.js"><link rel="prefetch" href="/assets/js/7.bcc705af.js"><link rel="prefetch" href="/assets/js/8.ea13e0c6.js"><link rel="prefetch" href="/assets/js/9.38047544.js"><link rel="prefetch" href="/assets/js/10.c93067f6.js"><link rel="prefetch" href="/assets/js/11.a4da946b.js"><link rel="prefetch" href="/assets/js/12.c0a2cfbe.js"><link rel="prefetch" href="/assets/js/13.9993b1af.js"><link rel="prefetch" href="/assets/js/14.1c6a6a66.js"><link rel="prefetch" href="/assets/js/15.48f9f5ec.js"><link rel="prefetch" href="/assets/js/16.996c54fd.js"><link rel="prefetch" href="/assets/js/17.2355763b.js"><link rel="prefetch" href="/assets/js/18.277d9b4b.js"><link rel="prefetch" href="/assets/js/19.0a467745.js"><link rel="prefetch" href="/assets/js/20.915bbeaf.js"><link rel="prefetch" href="/assets/js/21.648f31ca.js"><link rel="prefetch" href="/assets/js/22.4f9824a2.js"><link rel="prefetch" href="/assets/js/23.e61567dc.js"><link rel="prefetch" href="/assets/js/24.69929971.js"><link rel="prefetch" href="/assets/js/25.300540d4.js"><link rel="prefetch" href="/assets/js/26.d20e4140.js"><link rel="prefetch" href="/assets/js/27.85b92f4c.js"><link rel="prefetch" href="/assets/js/28.6ea7c8b9.js"><link rel="prefetch" href="/assets/js/29.d16f2649.js"><link rel="prefetch" href="/assets/js/30.1d239a8b.js"><link rel="prefetch" href="/assets/js/31.1f72fa11.js"><link rel="prefetch" href="/assets/js/32.6a9ab953.js"><link rel="prefetch" href="/assets/js/33.54316c95.js"><link rel="prefetch" href="/assets/js/34.34172cce.js"><link rel="prefetch" href="/assets/js/35.5f0ee834.js"><link rel="prefetch" href="/assets/js/36.6c4eb59b.js"><link rel="prefetch" href="/assets/js/37.81a9234d.js"><link rel="prefetch" href="/assets/js/38.44279587.js"><link rel="prefetch" href="/assets/js/39.995f3059.js"><link rel="prefetch" href="/assets/js/40.72440841.js"><link rel="prefetch" href="/assets/js/41.1f6087b3.js"><link rel="prefetch" href="/assets/js/42.e00fffa9.js"><link rel="prefetch" href="/assets/js/44.26d7ba27.js"><link rel="prefetch" href="/assets/js/45.6a4c231f.js"><link rel="prefetch" href="/assets/js/46.114e0a91.js"><link rel="prefetch" href="/assets/js/47.19ad2693.js"><link rel="prefetch" href="/assets/js/48.31502644.js"><link rel="prefetch" href="/assets/js/49.2137da54.js"><link rel="prefetch" href="/assets/js/50.541e1b2b.js"><link rel="prefetch" href="/assets/js/51.6f55c667.js"><link rel="prefetch" href="/assets/js/52.f30106f5.js"><link rel="prefetch" href="/assets/js/53.d4847047.js"><link rel="prefetch" href="/assets/js/54.82786253.js"><link rel="prefetch" href="/assets/js/55.cfa6c6bc.js"><link rel="prefetch" href="/assets/js/56.88115ce3.js"><link rel="prefetch" href="/assets/js/57.e621f570.js"><link rel="prefetch" href="/assets/js/58.e18da658.js"><link rel="prefetch" href="/assets/js/59.45f5d5b1.js"><link rel="prefetch" href="/assets/js/60.b21e53f3.js"><link rel="prefetch" href="/assets/js/61.3f6dde5a.js"><link rel="prefetch" href="/assets/js/62.8f05945e.js"><link rel="prefetch" href="/assets/js/63.13f4479a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0bd7a5d6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      DMIT-2018 Student Notes
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/about/" class="nav-link">About</a></div><div class="nav-item"><a href="/topics/" class="nav-link">Notes</a></div><div class="nav-item"><a href="/demos/eRestaurant/" class="nav-link router-link-active">Demos</a></div><div class="nav-item"><a href="https://github.com/DMIT-2018/StudentNotes/issues/new" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Issues/Bugs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://moodle.nait.ca" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Moodle
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/about/" class="nav-link">About</a></div><div class="nav-item"><a href="/topics/" class="nav-link">Notes</a></div><div class="nav-item"><a href="/demos/eRestaurant/" class="nav-link router-link-active">Demos</a></div><div class="nav-item"><a href="https://github.com/DMIT-2018/StudentNotes/issues/new" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Issues/Bugs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://moodle.nait.ca" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Moodle
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><a href="/demos/eRestaurant/" class="sidebar-link">eRestaurant Demo</a></li><li><a href="/demos/eRestaurant/about/" class="sidebar-link">eRestaurant Background Story</a></li><li><a href="/demos/eRestaurant/dvcs/demo.html" class="sidebar-link">DVCS Demo</a></li><li><a href="/demos/eRestaurant/sitemaps/demo2.html" class="sidebar-link">Adding a Web.sitemap</a></li><li><a href="/demos/eRestaurant/linq/" class="sidebar-link">LINQ - Query and Method Syntax</a></li><li><a href="/demos/eRestaurant/linq/extensions.html" class="sidebar-link">LINQ - More Method Syntax</a></li><li><a href="/demos/eRestaurant/linq/practice.html" class="sidebar-link">Practice Linq</a></li><li><a href="/demos/eRestaurant/entityFramework/demo/demo.html" class="active sidebar-link">Entity Framework Demo</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/demos/eRestaurant/entityFramework/demo/demo.html#coding-the-entities" class="sidebar-link">Coding the Entities</a></li><li class="sidebar-sub-header"><a href="/demos/eRestaurant/entityFramework/demo/demo.html#coding-the-database-context" class="sidebar-link">Coding the Database Context</a></li></ul></li><li><a href="/demos/eRestaurant/entityFramework/practice/practice.html" class="sidebar-link">eRestuarant Practice</a></li><li><a href="/demos/eRestaurant/entityFramework/practice/practice-solution.html" class="sidebar-link">eRestuarant Practice - Solution</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/adminController.html" class="sidebar-link">Special Events - BLL</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/adminSpecialEvents.html" class="sidebar-link">Special Events - PL</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/menu.html" class="sidebar-link">Occupied Tables</a></li><li><a href="/demos/eRestaurant/reports/reportViewer/" class="sidebar-link">eRestaurant - Reporting Basics</a></li><li><a href="/demos/eRestaurant/reports/customizing/" class="sidebar-link">Customizing your Report</a></li><li><a href="/demos/eRestaurant/aspNet/userControls/messageUserControl.html" class="sidebar-link">MessageUserControl</a></li><li><a href="/demos/eRestaurant/testing/manual.html" class="sidebar-link">Faking a Point In Time</a></li><li><a href="/demos/eRestaurant/linq/frontDesk/reservations.html" class="sidebar-link">LinqPad - Querying Reservations</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/reservations.html" class="sidebar-link">Displaying Reservations</a></li><li><a href="/demos/eRestaurant/linq/frontDesk/occupiedTables.html" class="sidebar-link">LinqPad - Querying Occupied Tables</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/occupiedTables.html" class="sidebar-link">Occupied Tables</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/bootstrapStyle.html" class="sidebar-link">Styling the Front Desk</a></li><li><a href="/demos/eRestaurant/businessRules/businessRuleException.html" class="sidebar-link">Business Rule Violations</a></li><li><a href="/demos/eRestaurant/businessRules/frontDesk/seatingWalkIns.html" class="sidebar-link">Seating Walk-Ins</a></li><li><a href="/demos/eRestaurant/businessRules/frontDesk/seatingReservations.html" class="sidebar-link">Seating Reservations</a></li><li><a href="/demos/eRestaurant/aspNet/userControls/fakeDateTime.html" class="sidebar-link">Fake DateTime</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/queryString.html" class="sidebar-link">Serving Tables</a></li></ul></div><div class="page"><div class="content"><h1 id="erestuarant-sample-demo"><a href="#erestuarant-sample-demo" aria-hidden="true" class="header-anchor">#</a> eRestuarant Sample/Demo</h1><p>This sample uses the Entity Framework (EF) in a code-first approach for an existing database. Rather than reverse-engineer the database, these steps walk through creating the entities and the database context classes manually. The purpose of this is to gain a better understanding of how EF works as an ORM to map entities to a database.</p><p>Using the Entity Framework, it is possible to model the structure and relationships of database tables in our application. This model is known as a <strong>Database Model</strong> or simple a <strong>Model</strong>.</p><p>This demo assumes that you already have a VS solution with the Entity Framework included in the class library that the entities will be placed in. As a general rule-of-thumb, you should ensure that all projects in your VS solution that need Entity Framework are using the <em>same</em> version of the Entity Framework.</p><h2 id="coding-the-entities"><a href="#coding-the-entities" aria-hidden="true" class="header-anchor">#</a> Coding the Entities</h2><p>For the eRestaurant database, the following steps walk through coding the entities that will be mapped against the following three tables: SpecialEvents, Reservations and Tables.</p><p><img src="eRestaurant_ERD_entity-demo-tables.png" alt></p><p>eRestaurant - Demo Tables</p><h3 id="the-specialevent-class"><a href="#the-specialevent-class" aria-hidden="true" class="header-anchor">#</a> The <code>SpecialEvent</code> Class</h3><p>For the SpecialEvents database table, begin by creating a class with properties that will correspond to each column in the database table. Notice that the <code>EventCode</code> property requires the <code>[Key]</code> attribute to designate it as mapping to a column that is a primary key.</p><div class="language- extra-class"><pre class="language-text"><code>    public class SpecialEvent
+    {
+        [Key]
+        public string EventCode { get; set; }
+        public string Description { get; set; }
+        public bool Active { get; set; }
+    }
+</code></pre></div><p>SpecialEvent entity - properties matching columns</p><p>Next, add a navigation property that represents the relationship between the SpecialEvents and Reservations tables.</p><div class="language- extra-class"><pre class="language-text"><code>    public class SpecialEvent
+    {
+        [Key]
+        public string EventCode { get; set; }
+        public string Description { get; set; }
+        public bool Active { get; set; }
+
+        public virtual ICollection&lt;Reservation&gt; Reservations { get; set; }
+    }
+</code></pre></div><p>SpecialEvent entity - with Navigation Property</p><p>Lastly, there are some rules around the data in the SpecialEvents table (some of which are represented by constraints such as <code>NOT NULL</code> or lengths of <code>varchar</code> types). The following requirements will be supported through validation attributes and default values set through constructors. Note that we are including error messages should the validation rules in the attributes be violated. Attribute-based validation rules are checked as part of the <code>SaveChanges()</code> method on the database context class, just before the information is sent to the database.</p><ul><li>New <code>SpecialEvent</code> objects are Active by default.</li><li>The <code>EventCode</code> can only be a single character.</li><li>The <code>Description</code> must be between 5 and 30 characters (30 characters is the physical limit based on the <code>varchar(30)</code> data type on the column, while the minimum value of five characters is based on a general business rule).</li></ul><p>The first requirement will be met through the constructor; whenever a database table has a column with a default constraint, the default value should be set in the constructor of the entity class. The other requirements are met through C# attributes.</p><div class="language- extra-class"><pre class="language-text"><code>    public class SpecialEvent
+    {
+        [Key]
+        [Required(ErrorMessage = &quot;An Event Code is required (one character only)&quot;)]
+        [StringLength(1, ErrorMessage=&quot;Event Codes can only use a single-character code&quot;)]
+        public string EventCode { get; set; }
+        [Required(ErrorMessage = &quot;A Description is required (5-30 characters)&quot;)]
+        [StringLength(30, MinimumLength=5, ErrorMessage=&quot;Descriptions must be from 5 to 30 characters in length&quot;)]
+        public string Description { get; set; }
+        public bool Active { get; set; }
+
+        public virtual ICollection&lt;Reservation&gt; Reservations { get; set; }
+
+        public SpecialEvent()
+        {
+            Active = true;
+        }
+    }
+</code></pre></div><p>SpecialEvent entity - complete</p><h3 id="the-reservation-class"><a href="#the-reservation-class" aria-hidden="true" class="header-anchor">#</a> The <code>Reservation</code> Class</h3><p>For the Reservations database table, the following code shows properties for each column in the table. Note that since the primary key column - <code>ReservationID</code> - follows a pattern of <code>ClassNameID</code> (it matches the name of the class, with a suffix of ID), our property will not need the <code>[Key]</code> attribute to designate it as mapping to a primary key column. This pattern is one of many coding conventions used by the Entity Framework to simplify our C# code for the entity classes.</p><div class="language- extra-class"><pre class="language-text"><code>    public class Reservation
+    {
+        public int ReservationID { get; set; }
+
+        public string CustomerName { get; set; }
+        public DateTime ReservationDate { get; set; }
+        public int NumberInParty { get; set; }
+        public string ContactPhone { get; set; }
+        public string ReservationStatus { get; set; }
+        public string EventCode { get; set; }
+    }
+</code></pre></div><p>Reservation entity - properties matching columns</p><p>The Reservations table has direct relationships with three other tables in the database: SpecialEvents, ReservationsTables and Bills. We will need navigation properties for these. Since the Bills table is not on this partial ERD, we will not include a navigation property to that table.</p><p>For the ResevationTables, note that it is only a <a href="http://stackoverflow.com/q/1429908/2154662" target="_blank" rel="noopener noreferrer">Gerund<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> or <a href="http://stackoverflow.com/a/1429919/2154662" target="_blank" rel="noopener noreferrer">Join Table<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (or, as Martin Fowler prefers to call it, a <a href="http://martinfowler.com/eaaCatalog/associationTableMapping.html" target="_blank" rel="noopener noreferrer">Link table<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>). As such, ReservationTables is a normalization of a many-to-many relationship between Reservations and Tables:</p><blockquote><p>Each <strong>Reservation</strong> may be <em>for</em> one or more <strong>Tables</strong>. Each <strong>Table</strong> may be <em>set aside for</em> one or more <strong>Reservations</strong>.</p></blockquote><p>Since ReservationTables is being used in this way, we can simplify our model by using navigation properties to directly represent our many-to-many relationship and thereby omit having to create a <code>ReservationTable</code> entity.</p><p>The remaining table - SpecialEvents - will be mapped directly with a navigation property.</p><div class="language- extra-class"><pre class="language-text"><code>    public class Reservation
+    {
+        public int ReservationID { get; set; }
+
+        public string CustomerName { get; set; }
+        public DateTime ReservationDate { get; set; }
+        public int NumberInParty { get; set; }
+        public string ContactPhone { get; set; }
+        public string ReservationStatus { get; set; }
+        public string EventCode { get; set; }
+
+        public virtual SpecialEvent Event { get; set; }
+        public virtual ICollection&lt;Table&gt; Tables { get; set; }
+    }
+</code></pre></div><p>Resevation entity - with Navigation Properties</p><p>Note that since we have not yet coded the <code>Table</code> class, Visual Studio will alert us to a compiler error for referencing it in our navigation property. For the moment, ignore the error – it will go away once we have coded the <code>Table</code> entity.</p><p>As in the case of <code>SpecialEvent</code>, we will need to add attributes and a constructor for property initializations in order to support the following rules for the data in the Reservations table:</p><ul><li>CustomerName, ContactPhone and ReservationStatus are all required.</li><li>We can accomodate up to 16 people in a reservation, but the minimum is one.</li><li>Maximum string lengths should be applied as noted in the database column's data type.</li></ul><div class="language- extra-class"><pre class="language-text"><code>    public class Reservation
+    {
+        public int ReservationID { get; set; }
+
+        [Required]
+        [StringLength(40)]
+        public string CustomerName { get; set; }
+        public DateTime ReservationDate { get; set; }
+        [Range(1, 16)]
+        public int NumberInParty { get; set; }
+        [StringLength(15)]
+        public string ContactPhone { get; set; }
+        // TODO: (in BLL) Validate acceptable values using constants above
+        [Required, StringLength(1, MinimumLength=1)]
+        public string ReservationStatus { get; set; }
+        [StringLength(1)]
+        public string EventCode { get; set; }
+
+        public virtual SpecialEvent Event { get; set; }
+        public virtual ICollection&lt;Table&gt; Tables { get; set; }
+    }
+</code></pre></div><p>Reservation entity - validation and business rules</p><p>As a final enhancement to the <code>Reservation</code> entity, it is helpful to note that the ReservationStatus column of the database table has a constraint restricting it to certain acceptable values. This kind of check constraint is too difficult to represent in any of the default validation attributes (at least, difficult without resorting to regular epxressions), and as such is best supported at the BLL. To aid in this, however, we can define a number of constants to represent those values and thereby make our code much easier to read once we reach the BLL.</p><div class="language- extra-class"><pre class="language-text"><code>    public class Reservation
+    {
+        // constants for valid reservation status values
+        // B = Booked; C = Complete; N = No-show; X = Cancelled
+        public const string Booked = &quot;B&quot;;
+        public const string Complete = &quot;C&quot;;
+        public const string NoShow = &quot;N&quot;;
+        public const string Cancelled = &quot;X&quot;;
+
+        public int ReservationID { get; set; }
+
+        [Required]
+        [StringLength(40)]
+        public string CustomerName { get; set; }
+        public DateTime ReservationDate { get; set; }
+        [Range(1, 16)]
+        public int NumberInParty { get; set; }
+        [StringLength(15)]
+        public string ContactPhone { get; set; }
+        // TODO: (in BLL) Validate acceptable values using constants above
+        [Required, StringLength(1, MinimumLength=1)]
+        public string ReservationStatus { get; set; }
+        [StringLength(1)]
+        public string EventCode { get; set; }
+
+        public virtual SpecialEvent Event { get; set; }
+        public virtual ICollection&lt;Table&gt; Tables { get; set; }
+    }
+</code></pre></div><p>Reservation entity - complete</p><h3 id="the-table-class"><a href="#the-table-class" aria-hidden="true" class="header-anchor">#</a> The <code>Table</code> Class</h3><p>Lastly, we can write the code for the entity representing the Tables database table. This database table will need to support the following constraints/rules:</p><ul><li>TableNumber is required and must be a positive number; we only anticipate growing to a maximum of 25 tables.</li><li>By default a new table is Available</li></ul><p>Rather than code this step-by-step, the following represents our finished <code>Table</code> entity.</p><div class="language- extra-class"><pre class="language-text"><code>    public class Table
+    {
+        public int TableID { get; set; }
+        [Required(ErrorMessage=&quot;Table Number is required&quot;)]
+        [Range(1, 25, ErrorMessage=&quot;Table Number must be a positive number&quot;)]
+        public byte TableNumber { get; set; }
+        public bool Smoking { get; set; }
+        public int Capacity { get; set; }
+        public bool Available { get; set; }
+
+        public virtual ICollection&lt;Reservation&gt; Reservations { get; set; }
+
+        public Table()
+        {
+            Available = true;
+        }
+    }
+</code></pre></div><p>Table entity - complete</p><p>A few points to note about creating Entity classes:</p><ul><li>Always name your entity classes in the singular. An instance of your entity class effectively represents a single row's worth of data in your database table.</li><li>By default, Entity Framework can identify a property as mapping to a primary key column by the convention of the property being named either <code>ID</code> or <code>ClassNameID</code>.<br>
+Entity Framework has a number of conventions that work well with most database structures. One of those conventions is the naming of Entities in the singular form even though the database is named in the plural form. When a database is named in the plural form, it tends to still name the int-based PK column in its singular (with an ID suffix).</li><li>Even though Entity Framework has conventions to recognize a primary key mapped property, you can still use the <code>[Key]</code> attribute.</li><li>Just because a relationship exists between two tables that you are mapping does not mean that you <em>have to</em> create a Navigation Property in your entities. Navigation properties are helpful for querying while in your BLL and for mirroring the foreign key constraints, but they are not necessary in your entities.</li><li>Entity Framework has no built-in mechanism to represent default constraints that might appear in your database table's columns. If you want to &quot;mirror&quot; that functionality, then you should set any defaults in the constructor of your entity.</li><li>Annotations help to represent simple constraints, but more complex ones - such as that seen in Reservations ReservationStatus column - are better enforced in the BLL.</li><li>In all cases, it's helpful to check the database table itself for documentation. Many DBAs will place information about column values or usage right on the database tables and columns through the use of <a href="http://sqlblog.com/blogs/michael_coles/archive/2010/01/12/t-sql-tuesday-easy-extended-properties.aspx" target="_blank" rel="noopener noreferrer">extended properties<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>. You can often view this information when looking at the table design in SSMS</li></ul><h2 id="coding-the-database-context"><a href="#coding-the-database-context" aria-hidden="true" class="header-anchor">#</a> Coding the Database Context</h2><p>The Database Context class is the class that acts as the DAL for our application. Under Entity Framework, a database context class is one that inherits from the <code>DbContext</code> class (in the <code>System.Data.Entity</code> namespace). Follow these steps to create a database context class that will support the entities coded above.</p><p>First, create the class itself. As a rule of thumb, the DAL is best declared as <code>internal</code> so as to deter &quot;bypassing&quot; the BLL.</p><div class="language- extra-class"><pre class="language-text"><code>    internal class RestaurantContext : DbContext
+    {
+        
+    }
+</code></pre></div><p>RestaurantContext - inherting DbContext</p><p>Next, it is helpful to specify a named connection string that can be used to obtain the settings to connect to the database. This is most easily specified by using a parameterless constructor that passes a hard-coded name to one of the base-class constructors. By convention, the actual connnection string name should be prefixed by name=. In this example, use the name EatIn.</p><div class="language- extra-class"><pre class="language-text"><code>    internal class RestaurantContext : DbContext
+    {
+        public RestaurantContext() : base(&quot;name=EatIn&quot;) { }
+    }
+</code></pre></div><p>RestaurantContext - specify connection string name</p><p>Individual tables and their mappings are represented by <code>DbSet&lt;T&gt;</code> properties on the database context class. The <code>DbSet&lt;T&gt;</code> class handles the details of the mapping of the table columns to the entity properties. In the database context class, the <code>DbSet&lt;T&gt;</code> properties should be named the same as the actual database tables, to leverage the default conventions of the Entity Framework in mapping the DbContext's properties to the tables.</p><div class="language- extra-class"><pre class="language-text"><code>    internal class RestaurantContext : DbContext
+    {
+        public RestaurantContext() : base(&quot;name=EatIn&quot;) { }
+
+        public DbSet&lt;Table&gt; Tables { get; set; }
+        public DbSet&lt;SpecialEvent&gt; SpecialEvents { get; set; }
+        public DbSet&lt;Reservation&gt; Reservations { get; set; }
+    }
+</code></pre></div><p>RestaurantContext - create properties as maps to tables</p><p>Because of the join table ReservationTables operating as the &quot;middleman&quot; between the Reservations and Tables, we need to clarify that mapping in our database context class. Mappings and other aspects of our database model can be controlled through the <code>DbContext.OnModelCreating()</code> method. By overriding this method, we can add our custom mappings. When overriding <code>OnModelCreating()</code>, it is important to remember to call the base method's implementation before you exit the method.</p><div class="language- extra-class"><pre class="language-text"><code>    internal class RestaurantContext : DbContext
+    {
+        public RestaurantContext() : base(&quot;name=EatIn&quot;) { }
+
+        public DbSet&lt;Table&gt; Tables { get; set; }
+        public DbSet&lt;SpecialEvent&gt; SpecialEvents { get; set; }
+        public DbSet&lt;Reservation&gt; Reservations { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity&lt;Reservation&gt;().HasMany(r =&gt; r.Tables)
+                .WithMany(t =&gt; t.Reservations)
+                .Map(mapping =&gt;
+                {
+                    mapping.ToTable(&quot;ReservationTables&quot;);
+                    mapping.MapLeftKey(&quot;ReservationID&quot;);
+                    mapping.MapRightKey(&quot;TableID&quot;);
+                });
+            base.OnModelCreating(modelBuilder);
+        }
+    }
+</code></pre></div><p>RestaurantContext - complete</p><p>As the number of entities grows in our system, we can add more properties to our database context class to map those entities to additional database tables.</p><p>Here are a few items to note when creating a database context class.</p><ul><li>Inherit from <code>DbContext</code></li><li>Call base constructor with <code>: base(&quot;name=EatIn&quot;)</code> to connect with specific connection string in web.config or app.config</li><li><code>DbSet&lt;T&gt;</code> is the appropriate data type to map properties on the database context to tables in the database</li><li>Override <code>OnModelCreating()</code> for any non-default aspects of the relationships between the entities in the model (such as the many-to-many relationship between the Table and Reservation classes)</li></ul></div><div class="page-edit"><!----><div class="last-updated"><span class="prefix">Last Updated: </span><span class="time">7/4/2018, 4:01:50 PM</span></div></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/demos/eRestaurant/linq/practice.html" class="prev">
+          Practice Linq
+        </a></span><span class="next"><a href="/demos/eRestaurant/entityFramework/practice/practice.html">
+          eRestuarant Practice
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/assets/js/43.d5cf75c2.js" defer></script><script src="/assets/js/app.7e06185b.js" defer></script>
+  </body>
+</html>

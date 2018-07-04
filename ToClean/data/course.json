@@ -1,0 +1,102 @@
+﻿{
+    "courseNumber": "DMIT 2018",
+    "courseName": "Application Development 2",
+    "startDate": "Sep 8, 2015",
+    "endDate": "Dec 18, 2015",
+    "reveal": "all",
+    "revealOptions": [
+        { "option": "all", "description": "Show all lessons" },
+        { "option": "weekly", "description": "Reveal lesson links weekly" }
+    ],
+    "navBase": "docs/course",
+    "nav": [
+        { "status": "v.1.0", "title": "Course Introduction", "doc": "about/intro.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Bootstrap and VS2013", "doc": "about/bootstrapInVS2013.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Colophon", "doc": "about/colophon.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "About", "doc": "about/about.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Change Log", "doc": "about/changeLog.html", "tooltip": "" }
+    ],
+    "scheduleTemplate": {
+        "week": "Week",
+        "topics": "Planned topics",
+        "evaluations": "In-Class Assessments"
+    },
+
+    "schedule": [
+        {
+            "week": 1,
+            "topics": [ "Course Intro", "DVCS - Git Basics" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 2,
+            "topics": [ "DVCS – Project Setup", "Linq Queries - LinqPad" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 3,
+            "topics": [ "Linq Queries - LinqPad", "Intro to UX & CQRS (T)" ],
+            "evaluations": [ "DVCS/Project Setup Bucket" ]
+        },
+        {
+            "week": 4,
+            "topics": [ "Entity Framework – Code First", "CQRS Intro", "Displaying Query Results – Linq + DTOs" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 5,
+            "topics": [ "Displaying Query Results – Linq + DTOs", "Command Processing + DTOs" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 6,
+            "topics": [ "Reporting Basics - Linq-crafted data", "Reporting Basics - Customize Reports", "Reports - Summary Reports" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 7,
+            "topics": [ "Security - Users, Roles, Folder Access", "Security - ASP.NET Identity" ],
+            "evaluations": [ "EF + Linq Bucket" ]
+        },
+        {
+            "week": 8,
+            "topics": [ "Transactions – OLTP Overview (T)", "UX - Designing for Command in CQRS" ],
+            "evaluations": [ "Report Bucket" ]
+        },
+        {
+            "week": 9,
+            "topics": [ "UX - Principles of User Interaction", "UX and Business Workflows" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 10,
+            "topics": [ "UX and Business Workflows" ],
+            "evaluations": [ "CQRS Bucket" ]
+        },
+        {
+            "week": 11,
+            "topics": [ "Project Mockups", "Project Implementation" ],
+            "evaluations": [ "Team Project Planning" ]
+        },
+        {
+            "week": 12,
+            "topics": [ "DVCS - Conflict Resolution" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 13,
+            "topics": [ "Website Deployment (optional)", "Database Deployment (optional)" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 14,
+            "topics": [ "Work Period" ],
+            "evaluations": [ ]
+        },
+        {
+            "week": 15,
+            "topics": [ "Project Presentations In Class" ],
+            "evaluations": [ ]
+        }
+    ]
+}

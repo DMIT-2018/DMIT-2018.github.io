@@ -1,0 +1,51 @@
+{
+    "navBase": "evaluations",
+    "nav": [
+    ],
+    "nav2": [
+        { "status": "v.1.0", "title": "DVCS", "doc": "WorkSchedule/DVCS/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Conflict Resolution", "doc": "WorkSchedule/DVCS/DVCS-Conflict.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "LINQ Queries", "doc": "WorkSchedule/Linq/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Databound Controls - Linq Query", "doc": "WorkSchedule/EntityFramework/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Reports", "doc": "WorkSchedule/Reports/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Transaction Exercise", "doc": "WorkSchedule/OLTP/exercise.html", "tooltip": "" }
+    ],
+    "nav2": [
+        { "status": "v.1.0", "title": "DVCS", "doc": "GroceryList/DVCS/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Conflict Resolution", "doc": "GroceryList/DVCS/DVCS-Conflict.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Databound Controls - Linq Query", "doc": "GroceryList/EntityFramework/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Linq Queries", "doc": "GroceryList/Linq/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Transaction Exercise", "doc": "GroceryList/OLTP/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "Reports", "doc": "GroceryList/Reports/exercise.html", "tooltip": "" }
+    ],
+    "old": [
+        {
+            "title": "In-Class Assessment Marking Rubrics",
+            "pages": [
+                { "title": "Overview", "href": "index.html", "isDefault": true },
+                { "title": "Assessment 1", "href": "bucket_1_marking.html" },
+                { "title": "Assessment 2", "href": "bucket_2_marking.html" },
+                { "title": "Assessment 3", "href": "bucket_3_marking.html" },
+                { "title": "Assessment 4", "href": "bucket_4_marking.html" },
+                { "title": "Assessment 5", "href": "bucket_5_marking.html" }
+            ]
+        },
+        {
+            "title": "Take-Home Exercises",
+            "pages": [
+                { "title": "Reports Exercise", "href": "Reports/exercise/exercise.html" },
+                { "title": "ListView Exercise", "href": "DataboundControls/ListView/exercise/exercise-locations.html" },
+                { "title": "Entity Framework Code First", "href": "EntityFramework/exercise/exercise.html" },
+                { "title": "XML and SiteMap", "href": "SiteMaps/exercise/exercise.html" },
+                { "title": "DVCS", "href": "DVCS/exercise/exercise.html" }
+            ]
+        },
+        { "status": "_tba_", "title": "SiteMap", "doc": "SiteMaps/exercise.html", "tooltip": "" },
+        { "status": "v.1.0", "title": "EF Code First", "doc": "EntityFramework/exercise.html", "tooltip": "" },
+        
+        { "status": "_tba_", "title": "Databound Controls - Nested Repeater", "doc": "/exercise.html", "tooltip": "" },
+       
+        { "status": "_tba_", "title": "Security", "doc": "/exercise.html", "tooltip": "" }
+       
+    ]
+}

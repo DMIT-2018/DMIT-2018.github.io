@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ASP.NET Identity | DMIT-2018 Student Notes</title>
+    <meta name="description" content="Intermediate Application Development">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.0bd7a5d6.css" as="style"><link rel="preload" href="/assets/js/app.7e06185b.js" as="script"><link rel="preload" href="/assets/js/30.1d239a8b.js" as="script"><link rel="prefetch" href="/assets/js/1.fe732339.js"><link rel="prefetch" href="/assets/js/2.725584c3.js"><link rel="prefetch" href="/assets/js/3.9bb80258.js"><link rel="prefetch" href="/assets/js/4.07be255d.js"><link rel="prefetch" href="/assets/js/5.b123ba8e.js"><link rel="prefetch" href="/assets/js/6.33b3f99e.js"><link rel="prefetch" href="/assets/js/7.bcc705af.js"><link rel="prefetch" href="/assets/js/8.ea13e0c6.js"><link rel="prefetch" href="/assets/js/9.38047544.js"><link rel="prefetch" href="/assets/js/10.c93067f6.js"><link rel="prefetch" href="/assets/js/11.a4da946b.js"><link rel="prefetch" href="/assets/js/12.c0a2cfbe.js"><link rel="prefetch" href="/assets/js/13.9993b1af.js"><link rel="prefetch" href="/assets/js/14.1c6a6a66.js"><link rel="prefetch" href="/assets/js/15.48f9f5ec.js"><link rel="prefetch" href="/assets/js/16.996c54fd.js"><link rel="prefetch" href="/assets/js/17.2355763b.js"><link rel="prefetch" href="/assets/js/18.277d9b4b.js"><link rel="prefetch" href="/assets/js/19.0a467745.js"><link rel="prefetch" href="/assets/js/20.915bbeaf.js"><link rel="prefetch" href="/assets/js/21.648f31ca.js"><link rel="prefetch" href="/assets/js/22.4f9824a2.js"><link rel="prefetch" href="/assets/js/23.e61567dc.js"><link rel="prefetch" href="/assets/js/24.69929971.js"><link rel="prefetch" href="/assets/js/25.300540d4.js"><link rel="prefetch" href="/assets/js/26.d20e4140.js"><link rel="prefetch" href="/assets/js/27.85b92f4c.js"><link rel="prefetch" href="/assets/js/28.6ea7c8b9.js"><link rel="prefetch" href="/assets/js/29.d16f2649.js"><link rel="prefetch" href="/assets/js/31.1f72fa11.js"><link rel="prefetch" href="/assets/js/32.6a9ab953.js"><link rel="prefetch" href="/assets/js/33.54316c95.js"><link rel="prefetch" href="/assets/js/34.34172cce.js"><link rel="prefetch" href="/assets/js/35.5f0ee834.js"><link rel="prefetch" href="/assets/js/36.6c4eb59b.js"><link rel="prefetch" href="/assets/js/37.81a9234d.js"><link rel="prefetch" href="/assets/js/38.44279587.js"><link rel="prefetch" href="/assets/js/39.995f3059.js"><link rel="prefetch" href="/assets/js/40.72440841.js"><link rel="prefetch" href="/assets/js/41.1f6087b3.js"><link rel="prefetch" href="/assets/js/42.e00fffa9.js"><link rel="prefetch" href="/assets/js/43.d5cf75c2.js"><link rel="prefetch" href="/assets/js/44.26d7ba27.js"><link rel="prefetch" href="/assets/js/45.6a4c231f.js"><link rel="prefetch" href="/assets/js/46.114e0a91.js"><link rel="prefetch" href="/assets/js/47.19ad2693.js"><link rel="prefetch" href="/assets/js/48.31502644.js"><link rel="prefetch" href="/assets/js/49.2137da54.js"><link rel="prefetch" href="/assets/js/50.541e1b2b.js"><link rel="prefetch" href="/assets/js/51.6f55c667.js"><link rel="prefetch" href="/assets/js/52.f30106f5.js"><link rel="prefetch" href="/assets/js/53.d4847047.js"><link rel="prefetch" href="/assets/js/54.82786253.js"><link rel="prefetch" href="/assets/js/55.cfa6c6bc.js"><link rel="prefetch" href="/assets/js/56.88115ce3.js"><link rel="prefetch" href="/assets/js/57.e621f570.js"><link rel="prefetch" href="/assets/js/58.e18da658.js"><link rel="prefetch" href="/assets/js/59.45f5d5b1.js"><link rel="prefetch" href="/assets/js/60.b21e53f3.js"><link rel="prefetch" href="/assets/js/61.3f6dde5a.js"><link rel="prefetch" href="/assets/js/62.8f05945e.js"><link rel="prefetch" href="/assets/js/63.13f4479a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0bd7a5d6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      DMIT-2018 Student Notes
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/about/" class="nav-link">About</a></div><div class="nav-item"><a href="/topics/" class="nav-link">Notes</a></div><div class="nav-item"><a href="/demos/eRestaurant/" class="nav-link router-link-active">Demos</a></div><div class="nav-item"><a href="https://github.com/DMIT-2018/StudentNotes/issues/new" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Issues/Bugs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://moodle.nait.ca" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Moodle
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/about/" class="nav-link">About</a></div><div class="nav-item"><a href="/topics/" class="nav-link">Notes</a></div><div class="nav-item"><a href="/demos/eRestaurant/" class="nav-link router-link-active">Demos</a></div><div class="nav-item"><a href="https://github.com/DMIT-2018/StudentNotes/issues/new" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Issues/Bugs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://moodle.nait.ca" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Moodle
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><a href="/demos/eRestaurant/" class="sidebar-link">eRestaurant Demo</a></li><li><a href="/demos/eRestaurant/about/" class="sidebar-link">eRestaurant Background Story</a></li><li><a href="/demos/eRestaurant/dvcs/demo.html" class="sidebar-link">DVCS Demo</a></li><li><a href="/demos/eRestaurant/sitemaps/demo2.html" class="sidebar-link">Adding a Web.sitemap</a></li><li><a href="/demos/eRestaurant/linq/" class="sidebar-link">LINQ - Query and Method Syntax</a></li><li><a href="/demos/eRestaurant/linq/extensions.html" class="sidebar-link">LINQ - More Method Syntax</a></li><li><a href="/demos/eRestaurant/linq/practice.html" class="sidebar-link">Practice Linq</a></li><li><a href="/demos/eRestaurant/entityFramework/demo/demo.html" class="sidebar-link">Entity Framework Demo</a></li><li><a href="/demos/eRestaurant/entityFramework/practice/practice.html" class="sidebar-link">eRestuarant Practice</a></li><li><a href="/demos/eRestaurant/entityFramework/practice/practice-solution.html" class="sidebar-link">eRestuarant Practice - Solution</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/adminController.html" class="sidebar-link">Special Events - BLL</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/adminSpecialEvents.html" class="sidebar-link">Special Events - PL</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/menu.html" class="sidebar-link">Occupied Tables</a></li><li><a href="/demos/eRestaurant/reports/reportViewer/" class="sidebar-link">eRestaurant - Reporting Basics</a></li><li><a href="/demos/eRestaurant/reports/customizing/" class="sidebar-link">Customizing your Report</a></li><li><a href="/demos/eRestaurant/aspNet/userControls/messageUserControl.html" class="sidebar-link">MessageUserControl</a></li><li><a href="/demos/eRestaurant/testing/manual.html" class="sidebar-link">Faking a Point In Time</a></li><li><a href="/demos/eRestaurant/linq/frontDesk/reservations.html" class="sidebar-link">LinqPad - Querying Reservations</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/reservations.html" class="sidebar-link">Displaying Reservations</a></li><li><a href="/demos/eRestaurant/linq/frontDesk/occupiedTables.html" class="sidebar-link">LinqPad - Querying Occupied Tables</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/occupiedTables.html" class="sidebar-link">Occupied Tables</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/bootstrapStyle.html" class="sidebar-link">Styling the Front Desk</a></li><li><a href="/demos/eRestaurant/businessRules/businessRuleException.html" class="sidebar-link">Business Rule Violations</a></li><li><a href="/demos/eRestaurant/businessRules/frontDesk/seatingWalkIns.html" class="sidebar-link">Seating Walk-Ins</a></li><li><a href="/demos/eRestaurant/businessRules/frontDesk/seatingReservations.html" class="sidebar-link">Seating Reservations</a></li><li><a href="/demos/eRestaurant/aspNet/userControls/fakeDateTime.html" class="sidebar-link">Fake DateTime</a></li><li><a href="/demos/eRestaurant/aspNet/frontDesk/queryString.html" class="sidebar-link">Serving Tables</a></li></ul></div><div class="page"><div class="content"><h1 id="asp-net-identity-erestaurant-sample-demo"><a href="#asp-net-identity-erestaurant-sample-demo" aria-hidden="true" class="header-anchor">#</a> ASP.NET Identity - eRestaurant Sample/Demo</h1><blockquote><p><strong>Extra Reading</strong>: <a href="http://weblogs.asp.net/jongalloway/asp-net-menu-and-sitemap-security-trimming-plus-a-trick-for-when-your-menu-and-security-don-t-match-up" target="_blank" rel="noopener noreferrer">Security Sitemap Setup<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote><h2 id="overview"><a href="#overview" aria-hidden="true" class="header-anchor">#</a> Overview</h2><p>The website template used to start our application has ASP.NET Identity already built-in. Unless otherwise noted in the demo, there will be no need to modify these files. Here are the key files that have been included (files in the ~/bin/ folder are not listed here, but are integral to the functioning of ASP.NET Identity):</p><dl><dt>Login Page - <code>~/Account/Login.aspx</code></dt><dd>This page presents the login form that leverages ASP.NET Identity. There is no need to modify this form.</dd><dt>Manage Account - <code>~/Account/Manage.aspx</code></dt><dd>This page allows the logged in user to manage their account, performing such actions as changing password, email, etc.</dd><dt>Register - <code>~/Account/Register.aspx</code></dt><dd>This page allows new users to register onto the site. By default, new users are not added to any given security role.</dd><dt>Register External Logins - <code>~/Account/RegisterExternalLogin.aspx</code></dt><dd>This page allows new users to register onto the site using 3rd-party sites for authentication, such as Microsoft Live, Facebook, Twitter, or Google. By default, new users are not added to any given security role.</dd><dt>3<sup>rd</sup> Party Logins - <code>~/Account/OpenAuthProviders.ascx</code></dt><dd>This user control lists the supported 3rd-party sites used for authentication, such as Microsoft Live, Facebook, Twitter, or Google.</dd><dt>Account Folder Configuration - <code>~/Account/Web.config</code></dt><dd>This configuration file ensures that only authenticated users are allowed access to the pages in the Account folder, thereby forcing users who are not logged in to the only public page in the Account folder: ~/Account/Login.aspx</dd><dt>EF Identity Models - <code>~/App_Code/IdentityModel.cs</code></dt><dd>This file contains core Identity and related Entity Framework classes (which should be moved out to a separate class library if you are using Migrations) along with a number of OWIN-related methods. OWIN is a middleware package for the ASP.NET pipeline that supports using 3rd-party sites for authentication, such as Microsoft Live, Facebook, Twitter, or Google.</dd><dt>Startup - <code>~/App_Code/Startup.Auth.cs</code></dt><dd>Contains the Startup class which has a method for configuring authentication for the website. You can modify this file to allow authentication through Microsoft Live, Facebook, Twitter, Google, or other providers.</dd></dl><h3 id="upgrading-your-site"><a href="#upgrading-your-site" aria-hidden="true" class="header-anchor">#</a> Upgrading your site</h3><p>To make use of the latest version of ASP.NET Identity, we will need to update our NuGet packages. First, right-click on your solution and select &quot;Manage NuGet Packages for solution…&quot;. In the dialog box, select Update in the left panel and click <strong>Update All</strong>. This will update all the packages, including ASP.NET Identity, to the latest versions. Updating packages this way ensures that any dependencies in packages are also updated.</p><p><img src="/assets/img/UpdateNugetPackages.4ad17a94.png" alt="Manage NuGet Packages - Update All"></p><p>If you are prompted to overwrite any files, click &quot;Yes to All&quot;.</p><p><img src="/assets/img/UpdateNugetPackages-OverwriteFiles.bc452544.png" alt="Overwrite all files"></p><p>In this demo, we will extend the built-in implementation of ASP.NET Identity to support the eRestaurant scenario, allowing sign-in for restaurant staff. Note that this demo will not discuss the architectural structure of ASP.NET Identity, but will simply leverage it for use in the eRestuarant application.</p><p>The Identity framework in the website uses its own database context class called <code>ApplicationDbContext</code> (inside the ~/App_Code/IdentityModel.cs file). It is configured to use a connection string called DefaultConnection.</p><p>This database context class is internally configured to generate the necessary database tables for storing the security-related information for the site whenever that context class is compiled. In the case of a <em>web site</em> template, this database context class is compiled &quot;on-the-fly&quot; when someone tries to access the Register.aspx or Login.aspx pages (which is why you won't see these tables unless you visit these pages, even if the DefaultConnection is pointing to the same database as the rest of your apps).</p><p><img src="/assets/img/ERD-ASP.NET-Identity.edac018d.png" alt="ASP.NET Identity - Database Tables"></p><p>During your development, you may still run into changes in your database tables for ASP.NET Identity-related security (such as the one for adding the WaiterID to the <code>ApplicationUser</code> class). If you already have the ASP.NET Identity tables in your database and they do not reflect your most current version of your modifications, you can simply drop those tables. ASP.NET Identity is configured to create the tables if they don't exist.</p><p>Right-click on IIS Express in the taskbar and select &quot;Exit&quot;.</p><p><img src="data:image/png;base64,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" alt="Exit IIS Express"></p><p><img src="/assets/img/IIS-Express-Exit-Confirmation.282eec76.png" alt="Cofirm Exit"></p><p>Remember to either <strong>rebuild your solution after you delete these ASP.NET Identity tables</strong> or <strong>manually stopping IIS Express</strong>. This is necessary because your web application must be re-started so that the <code>ApplicationDbContext</code> can run the database initializer, which re-creates the necessary database tables for ASP.NET Identity.</p><p><img src="/assets/img/DropTables.d4a5faf3.png" alt="SQL Server Object Explorer - Drop Tables"></p><p><img src="/assets/img/UpdateDatabase-DropTables.4d609677.png" alt="Drop Tables - Update Database"></p><p>Pulling Identity EntityFramework into your Class Library</p><p>These steps only apply if you are using an <strong>ASP.NET Web Forms Site</strong><em>web site</em> template in your solution (as opposed to an <strong>ASP.NET Web Application</strong> – WAP – <em>project template</em>). For a discussion on the distinction between using a Web Site as opposed to a Web Project, see the following resources:</p><p>The core classes for using Identity EntityFramework are, by default, included in the App_Code folder of the website. Since our application already uses a class library for the Business Logic and Data Access layers as well as our application's Entity classes, it makes better sense to move the Identity EntityFramework classes into our class library. The reasons for this are as follows:</p><ul><li>Our application will leverage some kind of association with users</li><li>We can more easily implement custom user profile information, integrating it with any other application-specific processes and data</li><li>Encapsulating security in your class libary helps isolate the database context and enforce the use of the <code>UserManager</code> BLL class (thereby preventing the front-end from having direct access to the security related DAL)</li><li>For future versions of our application, we can leverage Database Migrations (cannot be implemented in a Web Site, but requires a compilable project)</li></ul><details><summary>Expand for detailed steps</summary><ol><li>Right-click on your solution and choose &quot;Manage NuGet Packages for Solution...&quot;. In the dialog, select the Installed packages and click &quot;Manage&quot; for the core Identity with Entity Framework package. Then check on the checkbox to include this with your class library. Screenshots</li></ol><p><img src="/assets/img/Manage-NuGet-Identity-Entity-Framework.9a98516f.png" alt="Manage NuGet Identity Entity Framework"></p><p><img src="/assets/img/Manage-NuGet-Identity-Entity-Framework-Add-To-Class-Library.8c71d5ab.png" alt="Add to Class Library"></p><ol start="2"><li>In your website, open <code>~/App_Code/IdentityModel.cs</code>. In the next steps, you will move the following classes out of this file and place them in your class library: the <code>ApplicationUser</code>, <code>ApplicationDbContext</code> and <code>UserManager</code> classes.</li><li>In your class library, create a sub-folder for your Entities folder called Security. Inside this folder, create a class called ApplicationUser. Replace the code for the class with the corresponding code from the website's <code>~/App_Code/IdentityModel.cs</code>. Expand for Code Details</li></ol><div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">// You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ApplicationUser</span> <span class="token punctuation">:</span> <span class="token class-name">IdentityUser</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="4"><li>In your class library, create a sub-folder for your DAL folder called Security. Inside this folder, create a class called ApplicationDbContext in your DAL folder. Replace the code for the class with the corresponding code from the website's <code>~/App_Code/IdentityModel.cs</code>. Notice also that we are making a single modification to make this DAL class <code>internal</code> to our class library. Expand for Code Details</li></ol><div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">internal</span> <span class="token keyword">class</span> <span class="token class-name">ApplicationDbContext</span> <span class="token punctuation">:</span> <span class="token class-name">IdentityDbContext</span><span class="token operator">&lt;</span>ApplicationUser<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">ApplicationDbContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span><span class="token string">&quot;DefaultConnection&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="5"><li>In your class library, create a sub-folder for your BLL folder called Security. Inside this folder, create a class in your BLL folder called UserManager. Replace the code for the class with the corresponding code from the website's <code>~/App_Code/IdentityModel.cs</code>. Expand for Code Details</li></ol><div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserManager</span> <span class="token punctuation">:</span> <span class="token class-name">UserManager</span><span class="token operator">&lt;</span>ApplicationUser<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">UserManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token generic-method"><span class="token function">UserStore</span><span class="token punctuation">&lt;</span><span class="token class-name">ApplicationUser</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ApplicationDbContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="6"><li>Decide on your namespace names for these three classes. Originally, the namespace used in the website was <code>Website</code>. If you wish, you can use this same namespace for the classes you pasted into your class library project. However, if you keep the Visual Studio's default namespacing pattern when you created your classes above, then you will need to reconcile the references in the various pages under ~/Account/ in your website as well as in some of the files in your ~/App_Code/ folder (such as <code>~/App_Code/IdentityModel.cs</code>). The easiest way to do this is to build your solution and go to each error, resolving the namespace associated with the <code>ApplicationUser</code> and <code>UserManager</code> classes by adding <code>using namespace;</code> statements.</li><li>If you are doing version control, this is a good time to commit your changes. Changed Files</li></ol><div class="language-shell extra-class"><pre class="language-text"><code>git add .
+modified:   eRestaurant/Website/Account/Login.aspx.cs
+modified:   eRestaurant/Website/Account/Manage.aspx.cs
+modified:   eRestaurant/Website/Account/Register.aspx.cs
+modified:   eRestaurant/Website/Account/RegisterExternalLogin.aspx.cs
+modified:   eRestaurant/Website/App_Code/IdentityModels.cs
+new file:   eRestaurant/eRestaurant/BLL/Security/UserManager.cs
+new file:   eRestaurant/eRestaurant/DAL/Security/ApplicationDbContext.cs
+new file:   eRestaurant/eRestaurant/Entities/Security/ApplicationUser.cs
+modified:   eRestaurant/eRestaurant/eRestaurant.csproj
+</code></pre></div><p>Adding a Role Manager</p><p>The basic implimentation of ASP.NET Identity above only contains a BLL class to manage users. It would be helpful to also include a class to manage security roles. You can add the following class to provide access to the built-in <code>IdentityRole</code> information in ASP.NET Identity.</p><p>Expand for Code Details</p><div class="language- extra-class"><pre class="language-text"><code>public class RoleManager : RoleManager&lt;IdentityRole&gt;
+{
+    public RoleManager()
+        : base(new RoleStore&lt;IdentityRole&gt;(new ApplicationDbContext()))
+    {
+    }
+}
+</code></pre></div><p>RoleManager</p><p>Setting the Connection String Expand for Code Details</p><div class="language- extra-class"><pre class="language-text"><code>    &lt;add name=&quot;DefaultConnection&quot; 
+        connectionString=&quot;Data Source=.;Initial Catalog=eRestaurant;Integrated Security=true;&quot;
+        providerName=&quot;System.Data.SqlClient&quot; /&gt;
+
+</code></pre></div><p>Web.config - Connection Strings</p><p>Extending ASP.NET Identity Modify ApplicationUser, UserManager, and RoleManager</p><ul><li><p>Add a reference to WaiterID - Modify ApplicationUser to have a nullable reference to our Waiter ID Expand for Code Details</p><div class="language- extra-class"><pre class="language-text"><code>    // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
+    public class ApplicationUser : IdentityUser
+    {
+        public int? WaiterID { get; set; }
+    }
+
+</code></pre></div><p>ApplicationUser.cs</p></li><li><p>Add a method to create default user accounts (one for each waiter) Expand for Code Details</p><div class="language- extra-class"><pre class="language-text"><code>    #region Constants
+    private const string STR_DEFAULT_PASSWORD = &quot;Pa$$word1&quot;;
+    /// &lt;summary&gt;Requires FirstName and LastName&lt;/summary&gt;
+    private const string STR_USERNAME_FORMAT = &quot;{0}.{0}&quot;;
+    /// &lt;summary&gt;Requires UserName&lt;/summary&gt;
+    private const string STR_EMAIL_FORMAT = &quot;{0}@eRestaurant.tba&quot;;
+    private const string STR_WEBMASTER_USERNAME = &quot;Webmaster&quot;;
+    #endregion
+</code></pre></div><p>UserManager.cs - Constants</p><div class="language- extra-class"><pre class="language-text"><code>public void AddDefaultUsers()
+{
+    using (var context = new RestaurantContext())
+    {
+        var employees = from data in context.Waiters
+                        where !data.ReleaseDate.HasValue
+                        select data;
+        foreach (var person in employees)
+        {
+            // Check if they exist
+            if (!Users.Any(u =&gt; u.WaiterID.HasValue &amp;&amp; u.WaiterID.Value == person.WaiterID))
+            {
+                string userName = string.Format(STR_USERNAME_FORMAT, person.FirstName, person.LastName);
+                var appUser = new ApplicationUser()
+                {
+                    UserName = userName,
+                    Email = string.Format(STR_EMAIL_FORMAT, userName),
+                    WaiterID = person.WaiterID
+                };
+                // NOTE: The following needs to use the this keyword in order to have access to the extension method
+                //       Create(ApplicationUser user, string password)
+                this.Create(appUser, STR_DEFAULT_PASSWORD);
+            }
+        }
+        // Add a web  master user
+        if (!Users.Any(u =&gt; u.UserName.Equals(STR_WEBMASTER_USERNAME)))
+        {
+            var webMasterAccount = new ApplicationUser()
+            {
+                UserName = STR_WEBMASTER_USERNAME,
+                Email = string.Format(STR_EMAIL_FORMAT, STR_WEBMASTER_USERNAME)
+            };
+            this.Create(webMasterAccount, STR_DEFAULT_PASSWORD);
+        }
+    }
+}
+</code></pre></div><p>UserManager.AddDefaultUsers()</p></li><li><p>Add a method to create default security roles; you can place it in the /Entities/Security/ folder. Expand for Code Details</p><div class="language- extra-class"><pre class="language-text"><code>    internal static class SecurityRoles
+    {
+        public const string WebsiteAdmins = &quot;WebsiteAdmins&quot;;
+        public const string RegisteredUsers = &quot;RegisteredUsers&quot;;
+        public const string Staff = &quot;Staff&quot;;
+        public static List&lt;string&gt; DefaultSecurityRoles
+        {
+            get
+            {
+                List&lt;string&gt; value = new List&lt;string&gt;();
+                value.Add(WebsiteAdmins);
+                value.Add(RegisteredUsers);
+                value.Add(Staff);
+                return value;
+            }
+        }
+    }
+
+</code></pre></div><p>SecurityRoles.cs</p><div class="language- extra-class"><pre class="language-text"><code>public void AddDefaultRoles()
+{
+    foreach (string roleName in SecurityRoles.DefaultSecurityRoles)
+    {
+        // Check if it exists
+        if (!Roles.Any(r =&gt; r.Name == roleName))
+        {
+            this.Create(new IdentityRole(roleName));
+        }
+    }
+}
+</code></pre></div><p>RoleManager.AddDefaultRoles()</p></li><li><p>Managing User Profile Changes - delete tables vs. enabling Migrations Expand for screenshot</p><p>Changes to databases in different releases of your software is a natural process. To manage those changes through Entity Framework, you can enable Migrations in your project. However, the topic of Entity Framework Migrations is beyond the scope of this course.</p><p>During your development, you may still run into changes in your database tables for ASP.NET Identity-related security (such as the one for adding the WaiterID to the <code>ApplicationUser</code> class). If you already have the ASP.NET Identity tables in your database and they do not reflect your most current version of your modifications, you can simply drop those tables. ASP.NET Identity is configured to create the tables if they don't exist.</p><p>Expand for ScreenShots</p><p>Right-click on IIS Express in the taskbar and select &quot;Exit&quot;.</p><p><img src="data:image/png;base64,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" alt><br><img src="/assets/img/IIS-Express-Exit-Confirmation.282eec76.png" alt></p><p>Exit IIS Express</p><p>If you drop the tables, you will need to have the web server (IIS Express) re-start your application so that the database initializer is ready to re-create the necessary database tables. This can be done by either <strong>manually stopping IIS Express</strong> or by <strong>rebuilding your solution after you delete these ASP.NET Identity tables</strong>. By re-building your solution, IIS Express (if it is running) will recognize that a change has been made in the DLLs and thus it will re-start the application when you refresh the page. This is necessary because your web application must be re-started so that the <code>ApplicationDbContext</code> can run the database initializer, which re-creates the necessary database tables for ASP.NET Identity.</p><p>Expand for ScreenShots</p><p><img src="/assets/img/DropTables.d4a5faf3.png" alt></p><p>SQL Server Object Explorer - Drop Tables</p><p><img src="/assets/img/UpdateDatabase-DropTables.4d609677.png" alt></p><p>Drop Tables - Update Database</p></li></ul><p>Website Security Form Manage Users and Roles</p><ul><li><p>Add a page to manage users and logins Expand for Code Details</p><p>Notice that we are also adding an ObjectDataSource control to list the waiters. This will be used when we associate a user account to a particular waiter.</p><div class="language- extra-class"><pre class="language-text"><code>&lt;asp:Content ID=&quot;Content1&quot; ContentPlaceHolderID=&quot;MainContent&quot; runat=&quot;Server&quot;&gt;
+    &lt;div class=&quot;row jumbotron&quot;&gt;
+        &lt;h1&gt;Site Administration&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-9&quot;&gt;
+            &lt;h2&gt;Users&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-3&quot;&gt;
+            &lt;h2&gt;Roles&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;%--List of Waiters--%&gt;
+    &lt;asp:ObjectDataSource runat=&quot;server&quot; ID=&quot;WaiterDataSource&quot; OldValuesParameterFormatString=&quot;original_{0}&quot; SelectMethod=&quot;ListAllWaiters&quot; TypeName=&quot;eRestaurant.BLL.RestaurantAdminController&quot;&gt;&lt;/asp:ObjectDataSource&gt;
+&lt;/asp:Content&gt;
+</code></pre></div><p>~/Admin/Security/Default.aspx</p></li><li><p>Create the form - two ListView controls - Layout + Item template only Expand for Code Details</p><p>There are a number of properties to the <code>ApplicationUser</code> that we may wish to show (the majority being those inherited from the <code>IdentityUser</code> class). For our purposes, however, we are interested primarily in the <code>UserName</code>, <code>Email</code>, <code>Roles</code>, and our custom property for <code>WaiterID</code>.</p><div class="language- extra-class"><pre class="language-text"><code>&lt;asp:ListView ID=&quot;UserListView&quot; runat=&quot;server&quot;
+    ItemType=&quot;eRestaurant.Entities.Security.ApplicationUser&quot;
+    OnItemCommand=&quot;UserListView_ItemCommand&quot;&gt;
+    &lt;EmptyDataTemplate&gt;
+        &lt;table runat=&quot;server&quot;&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    No users in this site.
+                    &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;AddWaiters&quot; Text=&quot;Add Waiters as users&quot; ID=&quot;AddWaitersButton&quot; /&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/EmptyDataTemplate&gt;
+    &lt;ItemTemplate&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;Edit&quot; Text=&quot;Edit&quot; ID=&quot;EditButton&quot; /&gt;
+                &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;Delete&quot; Text=&quot;Delete&quot; ID=&quot;DeleteButton&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:Label Text='&lt;%# Item.UserName %&gt;' runat=&quot;server&quot; ID=&quot;UserNameLabel&quot; /&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:Label Text='&lt;%# Item.Email %&gt;' runat=&quot;server&quot; ID=&quot;EmailLabel&quot; /&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;em&gt;password is hashed&lt;/em&gt;&lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:Label Text='&lt;%# Item.WaiterID %&gt;' runat=&quot;server&quot; ID=&quot;WaiterIDLabel&quot; /&gt;
+                &lt;asp:DropDownList ID=&quot;WaiterIDDropDown_Item&quot; runat=&quot;server&quot;
+                    AppendDataBoundItems=&quot;true&quot; SelectedValue='&lt;%# Item.WaiterID %&gt;'
+                    DataSourceID=&quot;WaiterDataSource&quot; Enabled=&quot;false&quot;
+                    DataTextField=&quot;FullName&quot; DataValueField=&quot;WaiterID&quot;&gt;
+                    &lt;asp:ListItem Value=&quot;&quot;&gt;[none]&lt;/asp:ListItem&gt;
+                &lt;/asp:DropDownList&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:Label runat=&quot;server&quot; ID=&quot;RolesCountLabel&quot;
+                    Text='&lt;%# string.Join(&quot;, &quot;, Item.Roles.Select(x=&gt;x.RoleId).ToArray()) %&gt;' /&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/ItemTemplate&gt;
+    &lt;LayoutTemplate&gt;
+        &lt;table runat=&quot;server&quot;&gt;
+            &lt;tr runat=&quot;server&quot;&gt;
+                &lt;td runat=&quot;server&quot;&gt;
+                    &lt;table runat=&quot;server&quot; id=&quot;itemPlaceholderContainer&quot;
+                        class=&quot;table table-condensed table-hover table-striped&quot;&gt;
+                        &lt;tr runat=&quot;server&quot;&gt;
+                            &lt;th runat=&quot;server&quot;&gt;Action&lt;/th&gt;
+                            &lt;th runat=&quot;server&quot;&gt;User Name&lt;/th&gt;
+                            &lt;th runat=&quot;server&quot;&gt;Email&lt;/th&gt;
+                            &lt;th runat=&quot;server&quot;&gt;Password&lt;/th&gt;
+                            &lt;th runat=&quot;server&quot;&gt;Waiter&lt;/th&gt;
+                            &lt;th runat=&quot;server&quot;&gt;Roles&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr runat=&quot;server&quot; id=&quot;itemPlaceholder&quot;&gt;&lt;/tr&gt;
+                    &lt;/table&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr runat=&quot;server&quot;&gt;
+                &lt;td runat=&quot;server&quot;&gt;
+                    &lt;asp:DataPager runat=&quot;server&quot; ID=&quot;DataPager1&quot;&gt;
+                        &lt;Fields&gt;
+                            &lt;asp:NextPreviousPagerField ButtonType=&quot;Button&quot; ShowFirstPageButton=&quot;True&quot; ShowLastPageButton=&quot;True&quot;&gt;&lt;/asp:NextPreviousPagerField&gt;
+                        &lt;/Fields&gt;
+                    &lt;/asp:DataPager&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/LayoutTemplate&gt;
+&lt;/asp:ListView&gt;
+</code></pre></div><p>UserListView</p><p>When displaying the security roles for the system, the only properties we will need to display are the <code>Name</code> of the role and the # of users in that role.</p><div class="language- extra-class"><pre class="language-text"><code>&lt;asp:ListView ID=&quot;RoleListView&quot; runat=&quot;server&quot;
+    ItemType=&quot;Microsoft.AspNet.Identity.EntityFramework.IdentityRole&quot;
+    OnItemCommand=&quot;RoleListView_ItemCommand&quot;&gt;
+    &lt;EmptyDataTemplate&gt;
+        &lt;table runat=&quot;server&quot;&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    No roles in this site.
+                    &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;AddDefaultRoles&quot; Text=&quot;Add default security roles&quot; ID=&quot;AddDefaultRolesButton&quot; /&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/EmptyDataTemplate&gt;
+    &lt;ItemTemplate&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;Edit&quot; Text=&quot;Edit&quot; ID=&quot;EditButton&quot; /&gt;
+                &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;Delete&quot; Text=&quot;Delete&quot; ID=&quot;DeleteButton&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;&lt;asp:Label Text='&lt;%# Item.Name %&gt;' runat=&quot;server&quot; ID=&quot;NameLabel&quot; /&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;asp:Label Text='&lt;%# Item.Users.Count %&gt;' runat=&quot;server&quot; ID=&quot;UsersCountLabel&quot; /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/ItemTemplate&gt;
+    &lt;LayoutTemplate&gt;
+        &lt;table runat=&quot;server&quot;&gt;
+            &lt;tr runat=&quot;server&quot;&gt;
+                &lt;td runat=&quot;server&quot;&gt;
+                    &lt;table runat=&quot;server&quot; id=&quot;itemPlaceholderContainer&quot;
+                        class=&quot;table table-condensed table-hover table-striped&quot;&gt;
+                        &lt;tr runat=&quot;server&quot;&gt;
+                            &lt;th runat=&quot;server&quot;&gt;Action&lt;/th&gt;
+                            &lt;th runat=&quot;server&quot;&gt;Role Name&lt;/th&gt;
+                            &lt;th runat=&quot;server&quot;&gt;Users&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr runat=&quot;server&quot; id=&quot;itemPlaceholder&quot;&gt;&lt;/tr&gt;
+                    &lt;/table&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr runat=&quot;server&quot;&gt;
+                &lt;td runat=&quot;server&quot;&gt;
+                    &lt;asp:DataPager runat=&quot;server&quot; ID=&quot;DataPager2&quot;&gt;
+                        &lt;Fields&gt;
+                            &lt;asp:NextPreviousPagerField ButtonType=&quot;Button&quot; ShowFirstPageButton=&quot;True&quot; ShowLastPageButton=&quot;True&quot;&gt;&lt;/asp:NextPreviousPagerField&gt;
+                        &lt;/Fields&gt;
+                    &lt;/asp:DataPager&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/LayoutTemplate&gt;
+&lt;/asp:ListView&gt;
+</code></pre></div><p>RoleListView</p></li><li><p>Add code-behind - view users/roles Expand for Code Details</p><div class="language- extra-class"><pre class="language-text"><code>    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            DataBindUserList();
+            DataBindRoleList();
+        }
+    }
+    private void DataBindRoleList()
+    {
+        // Populate the Roles Info
+        RoleListView.DataSource = new RoleManager().Roles.ToList();
+        RoleListView.DataBind();
+    }
+    private void DataBindUserList()
+    {
+        // Populate the Users Info
+        UserListView.DataSource = new UserManager().Users.ToList();
+        UserListView.DataBind();
+    }
+
+</code></pre></div><p>Page_Load() and methods to populate ListView controls</p></li><li><p>LinkButton click event handler to add default users/roles Expand for Code Details</p><div class="language- extra-class"><pre class="language-text"><code>    protected void UserListView_ItemCommand(object sender, ListViewCommandEventArgs e)
+    {
+        switch (e.CommandName)
+        {
+            case &quot;AddEmployees&quot;:
+                new UserManager().AddDefaultUsers();
+                DataBindUserList();
+                break;
+            default:
+                break;
+        }
+    }
+    protected void RoleListView_ItemCommand(object sender, ListViewCommandEventArgs e)
+    {
+        switch (e.CommandName)
+        {
+            case &quot;AddDefaultRoles&quot;:
+                new RoleManager().AddDefaultRoles();
+                DataBindRoleList();
+                break;
+            default:
+                break;
+        }
+    }
+
+</code></pre></div><p>ListView ItemCommand event handlers</p></li><li><p>Edit User Info - EditItemTemplate and Code-behind Expand for Code Details</p><p>In the markup for the form, add the following <code>EditItemTemplate</code> to the ListView that handles edting user information.</p><div class="language- extra-class"><pre class="language-text"><code>    &lt;EditItemTemplate&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;Update&quot; Text=&quot;Update&quot; ID=&quot;UpdateButton&quot; /&gt;
+                &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;Cancel&quot; Text=&quot;Cancel&quot; ID=&quot;CancelButton&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:TextBox ID=&quot;UserNameTextBox&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;User name&quot;
+                    Text='&lt;%# BindItem.UserName %&gt;' /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:TextBox ID=&quot;EmailTextBox&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;Email&quot;
+                    Text='&lt;%# BindItem.Email %&gt;' /&gt;
+                &lt;br /&gt;
+                &lt;asp:TextBox ID=&quot;EmailConfirmedTextBox&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;Confirm the Email&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:TextBox ID=&quot;Password&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;Password for the user&quot;
+                    Text='3tools.default' /&gt;
+                &lt;br /&gt;
+                &lt;asp:TextBox ID=&quot;PasswordConfirmedTextBox&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;Confirm Password for the user&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:DropDownList ID=&quot;WaiterIDDropDown&quot; runat=&quot;server&quot;
+                    AppendDataBoundItems=&quot;true&quot; DataSourceID=&quot;WaiterDataSource&quot;
+                    DataTextField=&quot;FullName&quot; DataValueField=&quot;WaiterID&quot;
+                    SelectedValue='&lt;%# BindItem.WaiterID %&gt;'&gt;
+                    &lt;asp:ListItem Value=&quot;0&quot;&gt;[Select an Waiter]&lt;/asp:ListItem&gt;
+                &lt;/asp:DropDownList&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:ListBox ID=&quot;UserRolesListBox&quot; runat=&quot;server&quot; SelectionMode=&quot;Multiple&quot;
+                    DataSource=&quot;&lt;%# UserRoles %&gt;&quot; DataTextField=&quot;Name&quot; DataValueField=&quot;Name&quot;&gt;&lt;/asp:ListBox&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/EditItemTemplate&gt;
+</code></pre></div><p>UserListView - EditItemTemplate</p><p>For the code-behind, to handle the Editing of user information, modify the <code>UserListView_ItemCommand()</code> method to include the following case in the <code>switch</code> statement.</p><p>Extra case in <code>UserListView_ItemCommand()</code> method's <code>switch</code></p></li><li><p>Add User - InsertItemTemplate and code-behind Expand for Code Details</p><p>In the markup for the form, add the following <code>InsertItemTemplate</code> to the ListView that handles adding new users.</p><div class="language- extra-class"><pre class="language-text"><code>    &lt;InsertItemTemplate&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;Insert&quot; Text=&quot;Insert&quot; ID=&quot;InsertButton&quot; /&gt;
+                &lt;asp:LinkButton runat=&quot;server&quot; CommandName=&quot;Cancel&quot; Text=&quot;Clear&quot; ID=&quot;CancelButton&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:TextBox ID=&quot;UserNameTextBox&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;User name&quot;
+                    Text='&lt;%# BindItem.UserName %&gt;' /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:TextBox ID=&quot;EmailTextBox&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;Email&quot;
+                    Text='&lt;%# BindItem.Email %&gt;' /&gt;
+                &lt;br /&gt;
+                &lt;asp:TextBox ID=&quot;EmailConfirmedTextBox&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;Confirm the Email&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:TextBox ID=&quot;Password&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;Password for the user&quot;
+                    Text='3tools.default' /&gt;
+                &lt;br /&gt;
+                &lt;asp:TextBox ID=&quot;PasswordConfirmedTextBox&quot; runat=&quot;server&quot;
+                    ToolTip=&quot;Confirm Password for the user&quot; /&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:DropDownList ID=&quot;WaiterIDDropDown&quot; runat=&quot;server&quot;
+                    AppendDataBoundItems=&quot;true&quot; DataSourceID=&quot;WaiterDataSource&quot;
+                    DataTextField=&quot;FullName&quot; DataValueField=&quot;WaiterID&quot;
+                    SelectedValue='&lt;%# BindItem.WaiterID %&gt;'&gt;
+                    &lt;asp:ListItem Value=&quot;0&quot;&gt;[Select an Waiter]&lt;/asp:ListItem&gt;
+                &lt;/asp:DropDownList&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;asp:ListBox ID=&quot;UserRolesListBox&quot; runat=&quot;server&quot; SelectionMode=&quot;Multiple&quot;
+                    DataSource=&quot;&lt;%# UserRoles %&gt;&quot; DataTextField=&quot;Name&quot; DataValueField=&quot;Name&quot;&gt;&lt;/asp:ListBox&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/InsertItemTemplate&gt;
+
+</code></pre></div><p>UserListView - InsertItemTemplate</p><p>For the code-behind, to handle the Inserting of user information, modify the <code>UserListView_ItemCommand()</code> method to include the following case in the <code>switch</code> statement.</p><p>Extra case in <code>UserListView_ItemCommand()</code> method's <code>switch</code></p></li><li><p><strong>Practice!</strong> Edit Role - EditItemTemplate and Code-behind Expand for Code Details</p></li><li><p><strong>Practice!</strong> Add Role - InsertItemTemplate and code-behind Expand for Code Details</p></li><li><p>About Us page for temp listing of the test usernames + passwords</p></li></ul><h3 id="todo-write-up-details"><a href="#todo-write-up-details" aria-hidden="true" class="header-anchor">#</a> TODO: Write up details</h3><h4 id="established-steps"><a href="#established-steps" aria-hidden="true" class="header-anchor">#</a> Established Steps</h4><ul><li><p>Update the Web.sitemap to link to the security page</p></li><li><p>Run the application to test viewing security and adding roles/users</p></li><li><p>Register on the site as a new user, and then view the security page again</p></li><li><p>Passing the <code>System.Security.Principle.IPrinciple</code> instance from the page (<code>this.User</code>) to your BLL for processing.</p><div class="language- extra-class"><pre class="language-text"><code>// Needed to be able to call such extension methods as User.Identity.GetUserId()
+using Microsoft.AspNet.Identity;
+// …
+    var userName = user.Identity.GetUserName();
+// …
+</code></pre></div></li></ul><h5 id="steps-to-re-work"><a href="#steps-to-re-work" aria-hidden="true" class="header-anchor">#</a> Steps to re-work</h5><ul><li>Add web.config to the Staff folder to require login</li><li>Modify root web.config to enable securitytrimming in the sitemap</li><li>Run the application to test logging in as staff</li><li>Add web.config to the Admin folder to require login by managers and super users</li><li>Restrict the Registration page</li></ul></details></div><div class="page-edit"><!----><div class="last-updated"><span class="prefix">Last Updated: </span><span class="time">7/4/2018, 4:29:00 PM</span></div></div><!----></div></div></div>
+    <script src="/assets/js/30.1d239a8b.js" defer></script><script src="/assets/js/app.7e06185b.js" defer></script>
+  </body>
+</html>
