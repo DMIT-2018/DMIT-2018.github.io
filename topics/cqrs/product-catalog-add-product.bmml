@@ -1,0 +1,54 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="747" measuredH="69" mockupW="747" mockupH="69">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::SubTitle" x="0" y="0" w="-1" h="-1" measuredW="178" measuredH="27" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Product%20Catalog</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::TextInput" x="14" y="42" w="127" h="-1" measuredW="99" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <state>up</state>
+        <text>%7Bcolor%3A%23555555%7DProduct%20Name%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="14" y="20" w="-1" h="-1" measuredW="82" measuredH="22" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>14</size>
+        <text>Add%20Product</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="156" y="42" w="276" h="-1" measuredW="81" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <state>up</state>
+        <text>%7Bcolor%3A%23555555%7DDescription%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="447" y="42" w="91" h="-1" measuredW="84" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <state>up</state>
+        <text>%7Bcolor%3A%23555555%7D%24%20Est.%20Price%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="553" y="42" w="64" h="-1" measuredW="40" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <state>up</state>
+        <text>%7Bcolor%3A%23555555%7DROL%7Bcolor%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::IconLabel" x="632" y="43" w="-1" h="-1" measuredW="115" measuredH="24" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <color>545684</color>
+        <icon>SquaredPlusIcon%7Csmall</icon>
+        <labelPosition>left</labelPosition>
+        <text>%5BAdd%20to%20Catalog%5D</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,11 @@
+﻿{
+    "title": "User Experience",
+    "pages":  [ 
+        { "title":  "Overview", "href": "index.html" , "isDefault": true },
+        { "title":  "More on UX", "href": "moreUX.html" },
+        { "title":  "Learning Outcomes", "href": "log.html" },
+        { "title":  "Lesson Plan", "href": "lesson-plan.html" },
+        { "title":  "Demo", "href": "demo.html" },
+        { "title":  "Exercise", "href": "exercise.html" }
+    ]
+}

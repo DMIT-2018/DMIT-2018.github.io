@@ -1,0 +1,29 @@
+﻿<div class="col-md-12">
+    <header>
+        <h1>{{ course.courseName }} <small>{{ course.courseNumber }}</small></h1>
+    </header>
+</div>
+<div class="col-md-8 pull-right">
+    <h2>Planning Calendar <small>{{ course.startDate + ' to ' + course.endDate }}</small></h2>
+    <div class="table-responsive">
+        <table class="table table-condensed table-hover table-bordered">
+            <tr>
+                <th class="active text-center">{{ course.scheduleTemplate.week }}</th>
+                <th class="info">{{ course.scheduleTemplate.topics }}</th>
+                <th class="success">{{ course.scheduleTemplate.evaluations }}</th>
+            </tr>
+            <tr ng-repeat="week in course.schedule">
+                <td class="active text-center"><span class="badge">{{ week.week }}</span></td>
+                <td class="info">
+                    <ul>
+                        <li ng-repeat="topic in week.topics" ng-click="loadLinks(topic)">{{topic}}</li>
+                    </ul>
+                </td>
+                <td class="success">{{ week.evaluations.join(', ') }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="col-md-4">
+
+</div>
