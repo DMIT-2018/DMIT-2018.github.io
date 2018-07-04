@@ -49,7 +49,7 @@ The Identity framework in the website uses its own database context class called
 
 This database context class is internally configured to generate the necessary database tables for storing the security-related information for the site whenever that context class is compiled. In the case of a *web site* template, this database context class is compiled "on-the-fly" when someone tries to access the Register.aspx or Login.aspx pages (which is why you won't see these tables unless you visit these pages, even if the DefaultConnection is pointing to the same database as the rest of your apps).
 
-![ASP.NET Identity - Database Tables](./ERD%20-%20ASP.NET%20Identity.png)
+![ASP.NET Identity - Database Tables](./ERD-ASP.NET-Identity.png)
 
 During your development, you may still run into changes in your database tables for ASP.NET Identity-related security (such as the one for adding the WaiterID to the `ApplicationUser` class). If you already have the ASP.NET Identity tables in your database and they do not reflect your most current version of your modifications, you can simply drop those tables. ASP.NET Identity is configured to create the tables if they don't exist.
 

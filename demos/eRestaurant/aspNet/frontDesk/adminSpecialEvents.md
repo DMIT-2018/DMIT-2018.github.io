@@ -9,7 +9,7 @@ Estimated time to complete this demo is 20 minutes.
 
 The following steps are to create a basic CRUD style form for managing Special Event data for eRestaurant. The goal of this is to create a form that looks similar to this screenshot.
 
-![eRestaurant Manage Special Events](./listview/Manage-pecial-Events.png)
+![eRestaurant Manage Special Events](./listview/Manage-Special-Events.png)
 
 1. Drag a ListView control onto the form and modify its id to match the following:
 
