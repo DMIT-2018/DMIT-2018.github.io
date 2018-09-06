@@ -22,6 +22,7 @@ module.exports = {
       { text: 'About', link: '/about/' },
       { text: 'Notes', link: '/topics/' },
       { text: 'Demos', link: '/demos/eRestaurant/' },
+      { text: 'Take Home', link: '/exercises/'}
       { text: 'Issues/Bugs', link: 'https://github.com/DMIT-2018/StudentNotes/issues/new' },
       { text: 'Moodle', link: 'https://moodle.nait.ca' },
 ],
