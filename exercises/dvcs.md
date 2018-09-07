@@ -25,7 +25,7 @@ Follow these steps to create a repository for your Visual Studio solution.
 - Create a new blank Visual Studio solution in your local GitHub folder (under My Documents) and name it DVCS Exercise and check Create new Git repository. Then add a web application in your solution folder, naming it as DVCS_Website. Select Web Forms and ensure Authentication is Individaul User Accounts. Turn off Host in cloud. When you are done, close down Visual Studio, saving all your changes.
 - Drag the solution folder onto GitHub Desktop. This will allow you to add your repository folder into the list of repositories in github DeskTop. Make sure that you a .gitignore file in your repository folder.
 - Commit your visual studio files and solution.
-- Publish the repository to GitHub (you must leave it as a public repository for this execise only). This will sync its contents with your GitHub account.
+- Publish the repository to GitHub (you must leave it as a **public** repository for this execise only). This will sync its contents with your GitHub account.
 - Test that you did it correctly
     - Log off of your current computer, and log onto a different computer.
     - Using GitHub Desktop, clone your repository.
