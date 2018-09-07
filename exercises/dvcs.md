@@ -3,21 +3,6 @@ title: GitHub Desktop
 ---
 # GitHub Desktop (DVCS) - Exercise (2 Marks)
 
-# Matching
-
-Match the following descriptions of the GitHub Desktop user-interface with the labels on the screen-shot.
-
-1. Commits History/Changes
-2. Sync (push/pull) with Origin
-3. Alterations of committed item
-4. General Operational Tools for Maintenance
-5. Change branch
-6. Current (selection of) repository
-
-![](./dvcs/new_desktop_jan2018.png)
-
-Write the letter from the image into the matching item on the left.
-
 # Using GitHub Desktop
 
 Follow these steps to create a repository for your Visual Studio solution.
@@ -40,9 +25,22 @@ Follow these steps to create a repository for your Visual Studio solution.
 - Commit your local changes, and synchronize your local and remote repositories.
 - Make five other changes to your solution (add web pages, etc.), committing each change separately. Be sure to use meaningful commit messages.
 
+# Matching
+
+Match the following descriptions of the GitHub Desktop user-interface with the labels on the screen-shot. Place your answers in the `ReadMe.md` file of your repository for this exercise. Clearly identify your question number and your answer.
+
+1. Commits History/Changes
+2. Sync (push/pull) with Origin
+3. Alterations of committed item
+4. General Operational Tools for Maintenance
+5. Change branch
+6. Current (selection of) repository
+
+![](./dvcs/new_desktop_jan2018.png)
+
 # Short Answer & Multiple Choice
 
-Supply or identify the following short answer/multiple-choice questions.
+Supply or identify the following short answer/multiple-choice questions. Place your answers in the `ReadMe.md` file of your repository for this exercise. Clearly identify your question number and your answer.
 
 1. Under which menu item is the Show in Explorer option. ____________________________
 1. Under which menu item can you Add or Clone repositories. ____________________________
