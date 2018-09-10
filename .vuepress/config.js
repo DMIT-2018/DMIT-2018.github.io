@@ -29,6 +29,7 @@ module.exports = {
     sidebar: {
       '/about/': [
         '',
+        'LOGs',
         'bootstrapInVS2013',
         'changeLog'
       ],
