@@ -1,0 +1,71 @@
+<section data-type="chapter">
+    <header class="page-header">
+        <h1>Entity Framework - Code First CRUD Exercise (3 Marks)</h1>
+        <h2>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-github fa-stack-2x text-muted"></i>
+                <i class="fa fa-lock fa-stack-1x text-danger"></i>
+            </span>
+            Private GitHub Repo Only
+        </h2>
+    </header>
+
+    <p data-type="note">Be aware that this is the first exercise in a series of cumulative exercises - you must be prepared to 
+    complete each exercise in light of the possibility that any given exercise may depend on the <strong>correct</strong> implementation
+        of previous exercises. Place this work in your private Exercise repository. Remember to handle your bin files through the Git Shell.</p>
+<h4>Setup</h4>
+    <p>Create a new VS Solution called GroceryListSolution. Place two class projects into this solution called GroceryListSystem and 
+        GroceryList.Data, along with a
+    web application called GroceryListWebsite. GroceryList.Data will have 3 folder called Entities, DTOs and POCOs. GroceryListSystem will have 
+        2 folders DAL and BLL. Add the NuGet package, EntityFramework, to your GroceryListSystem. Add references to your solution where needed/appropriate.
+  </p>
+  <h4>Entities</h4>
+    <p>Create Entity classes using <strong>reverse engineering</strong>. Create the entity classes in the Entity folder. Name the context class GroceryListContext. Use GroceryListDB as the connection string name.
+     <code>[Required]</code>, and <code>[StringLength]</code>  notations in your entities will not have error messages. You must place an ErrorMessage parameter within each notation such as that the message will be specific to the entity attribute.</p>
+     <p>Add the following not mapping properties:
+     <ul>
+     <li>Customer: FullName: returns the customer full name as LastName, Firstname</li>
+     <li>Customer: CityCustomer: returns the city and customer full name as City: LastName, Firstname</li>
+     <li>Picker: FullName: returns the picker full name as LastName, Firstname</li>
+     <li>Product: DescriptionUnitSize: returns the description and unitsize as Description (UnitSize)</li>
+     <li>Store: CityLocation: returns the city and location as City:Location</li>
+     </ul>
+     </p>
+    <figure>
+        <img src="grocerylist_erd.png" style="width:90%;" />
+        <figcaption>GroceryList ERD</figcaption>
+    </figure>
+    <h4>Context Class</h4>
+    <p>
+        Move the <strong>Context class</strong> to the DAL folder from the Entities folder; alter the namespace to GroceryListSystem.DAL; and include any necessary using statements. Remove the Context class from the entity folder. 
+        Create an appropriate web connection string file pointing to the database GroceryList. Add the &lt;context&gt; tag in the web.config
+        file under the &lt;entityframe&gt; tag. The context class is to be restricted to internal project access only.
+    </p>
+    <h4>BLL Controller Classes</h4>
+    <p>Create <strong>BLL controller classes</strong> for the two entities. The classes will allow ODS access to methods. Both classses
+        will have an appropriate _List() and _Get(int keyvalue) methods (exposed). The ProductController will have a 
+        method which will recieve an integer parameter representing a category and return all products within that category. The ProductController will implement _Add(Product), _Update(Product), _Delete(Product) and _Delete(int productid) methods. The overloaded _Delete(int productid) will do the actual delete of the product record of the database.
+        </p>
+    <h4>Web Page: Query</h4>
+    <p>
+        Create a web page that will display the product data related to a supplied category. Use <strong>only ODS wired controls</strong> to 
+        handle the data. Categories should be displayed in a ordered drop down list.
+        Display the ordered product data in a customized data control which obtains its input parameter value from the drop down list. 
+        Your display requires appropriate page title, labels and layout/formatting. You will need a button on your page to force a post back. This page <strong><u>must</u></strong> be accessiable by the site master menu.
+    </p>
+     <figure>
+        <img src="ExerciseQuery.png" />
+        <figcaption>Sample query result</figcaption>
+    </figure>
+    <h4>Web Page: CRUD</h4>
+    <p>
+        Create a web page that will maintain the Product entity. You will be requried to insert, update or delete records
+        to this entity. The Category data will be handled via an appropriate dropdownlist. <strong><u>Use a ODS 
+        wired ListView control</u></strong> to maintain the data. Appropriate formatting is required on the display lines. This page <strong><u>must</u></strong> be accessiable by the site master menu.
+        </p>
+     <figure>
+        <img src="ExerciseCRUD.png" />
+        <figcaption>ListView CRUD</figcaption>
+    </figure>
+</section>
+

@@ -36,7 +36,8 @@ module.exports = {
       ],
       '/exercises/' :[
         '',
-        'dvcs'
+        'dvcs',
+        'ef'
       ],
 
       '/topics/': [
