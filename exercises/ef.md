@@ -5,11 +5,11 @@ title: Entity Framework Code First
 
 ## Private GitHub Repo Only
 
-Be aware that this is the first exercise in a series of cumulative exercises - you must be prepared to complete each exercise in light of the possibility that any given exercise may depend on the **correct** implementation of previous exercises. Place this work in your private Exercise repository. Remember to handle your bin files through the Git Shell.
+Be aware that this is the first exercise in a series of cumulative exercises - you must be prepared to complete each exercise in light of the possibility that any given exercise may depend on the **correct** implementation of previous exercises. Place this work in your classroom private Exercise repository. 
 
 #### Setup
 
-Create a new VS Solution called GroceryListSolution. Place two class projects into this solution called GroceryListSystem and GroceryList.Data, along with a web application called GroceryListWebsite. GroceryList.Data will have 3 folder called Entities, DTOs and POCOs. GroceryListSystem will have 2 folders DAL and BLL. Add the NuGet package, EntityFramework, to your GroceryListSystem. Add references to your solution where needed/appropriate.
+Create a new VS Solution called GroceryListSolution. Place two class projects into this solution called GroceryListSystem and GroceryList.Data, along with a web application called WebApp. GroceryList.Data will have 3 folder called Entities, DTOs and POCOs. GroceryListSystem will have 2 folders DAL and BLL. Add the NuGet package, EntityFramework, to your class libraries. Add references to your solution where needed/appropriate.
 
 #### Entities
 
@@ -28,11 +28,11 @@ Add the following not mapping properties:
 
 #### Context Class
 
-Move the **Context class** to the DAL folder from the Entities folder; alter the namespace to GroceryListSystem.DAL; and include any necessary using statements. Remove the Context class from the entity folder. Create an appropriate web connection string file pointing to the database GroceryList. Add the <context> tag in the web.config file under the <entityframe> tag. The context class is to be restricted to internal project access only.
+Move the **Context class** to the DAL folder from the Entities folder; alter the namespace to GroceryListSystem.DAL; and include any necessary using statements. Remove the Context class from the entity folder. Create an appropriate web connection string file pointing to the database GroceryList. Add the `<context>` tag in the web.config file under the `<entityframe>` tag. The context class is to be restricted to internal project access only.
 
 #### BLL Controller Classes
 
-Create **BLL controller classes** for the two entities. The classes will allow ODS access to methods. Both classses will have an appropriate \_List() and \_Get(int keyvalue) methods (exposed). The ProductController will have a method which will recieve an integer parameter representing a category and return all products within that category. The ProductController will implement \_Add(Product), \_Update(Product), \_Delete(Product) and \_Delete(int productid) methods. The overloaded \_Delete(int productid) will do the actual delete of the product record of the database.
+Create **BLL controller classes** for the two entities. The classes will allow ODS access to methods. Both classses will have an appropriate List() and Get(int keyvalue) methods (exposed). The ProductController will have a method which will recieve an integer parameter representing a category and return all products within that category. The ProductController will implement Add(Product), Update(Product), Delete(Product) and Delete(int productid) methods. The overloaded Delete(int productid) will do the actual delete of the product record of the database.
 
 #### Web Page: Query
 
