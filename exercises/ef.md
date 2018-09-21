@@ -1,7 +1,7 @@
 ---
 title: Entity Framework Code First
 ---
-# Entity Framework - Code First CRUD Exercise (3 Marks)
+# Entity Framework - Code First CRUD Exercise (4 Marks)
 
 ## Private GitHub Repo Only
 
