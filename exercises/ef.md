@@ -32,7 +32,7 @@ Move the **Context class** to the DAL folder from the Entities folder; alter the
 
 #### BLL Controller Classes
 
-Create **BLL controller classes** for the two entities. The classes will allow ODS access to methods. Both classses will have an appropriate List() and Get(int keyvalue) methods (exposed). The ProductController will have a method which will recieve an integer parameter representing a category and return all products within that category. The ProductController will implement Add(Product), Update(Product), Delete(Product) and Delete(int productid) methods. The overloaded Delete(int productid) will do the actual delete of the product record of the database.
+Create **BLL controller classes** for the two entities: Category and Product. The classes will allow ODS access to methods. Both classses will have an appropriate List() and Get(int keyvalue) methods (exposed). The ProductController will have a method which will recieve an integer parameter representing a category and return all products within that category. The ProductController will implement Add(Product), Update(Product), Delete(Product) and Delete(int productid) methods. The overloaded Delete(int productid) will do the actual delete of the product record of the database.
 
 #### Web Page: Query
 
