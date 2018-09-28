@@ -1,0 +1,84 @@
+<section data-type="chapter">
+    <header class="page-header">
+        <h1>LINQ and LinqPad Exercise (3 Marks)</h1>
+	<h2>Due March 9 2018</h2>
+        <h2>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-github fa-stack-2x text-muted"></i>
+                <i class="fa fa-lock fa-stack-1x text-danger"></i>
+            </span>
+            Private Classroom GitHub Repo Only
+        </h2>
+    </header>
+
+    <p>This exercise is based on the GroceryList database. For this exercise, provide your answers as LinqPad (.linq) document(s). Use either A) a single LinqPad document for each question (you will use Expressions as the LinqPad environment <b><u>or</u></b> B) a single LinqPad document containing all questions (you will need to use Statements as the LinqPad environment.</p>
+
+    <details>
+        <summary>Click for GroceryList ERD</summary>
+        <figure>
+            <img src="grocerylist_erd.png" />
+            <figcaption>GroceryList ERD</figcaption>
+        </figure>
+    </details>
+
+    <ol>
+        <li>
+            Create a product list which indicates what products are 
+			purchased by our customers and how many times that product was purchased.
+			Order the list by most popular product by alphabetic description
+            <figure>
+                <img src="q1.png" alt="" />
+                <figcaption>Product Purchase List</figcaption>
+            </figure>
+        </li>
+        <li>
+            We want a mailing list for a Valued Customers flyer that is being sent out.
+			List the customer addresses for customers who have shopped at each store.
+			List by the store. Include the store location as well as the customer's address.
+			Do NOT include the customer name in the results.             
+            <figure>
+                <img src="q2.png" alt="" />
+                <figcaption>Customer mailing</figcaption>
+            </figure>
+        </li>
+        <li>
+			Create a Daily Sales per Store request for a specified month.
+			Order stores by city by location. For Sales, show order date, 
+			number of orders, total sales without GST tax
+			and total GST tax. 
+            <figure>
+                <img src="q3.png" alt="" />
+                <figcaption>Daily Sales per Store</figcaption>
+            </figure>
+        </li>
+        <li>
+			Print out all product items on a requested order (use Order #33).  
+			Group by Category and order by Product Description. You do not need to format money as this would be done
+			at the presentation level. Use the QtyPicked in your calculations.
+			Hint: You will need to using type casting (decimal).
+			Use of the ternary operator will help.
+            <figure>
+                <img src="q4.png" alt="" />
+                <figcaption>Order receipt</figcaption>
+            </figure>
+        </li>
+        <li>
+            Select all orders a picker has done on a particular week (Sunday through Saturday).
+			List by picker and order by picker and date. Hint: you will need to use the join operator.
+            <figure>
+                <img src="q5.png" alt="" />
+                <figcaption>Pickers pickings</figcaption>
+            </figure>
+        </li>
+        <li>
+			List all the products a customer (use Customer #1) has purchased and the number of times the product was purchased.
+			Order by number of times purchased then description
+            <figure>
+                <img src="q6.png" alt="" />
+                <figcaption>Customer product preference</figcaption>
+            </figure>
+        </li>
+
+    </ol>
+
+</section>
