@@ -21,7 +21,7 @@ module.exports = {
     nav: [
       { text: 'About', link: '/about/' },
       { text: 'Notes', link: '/topics/' },
-      { text: 'Demos', link: '/demos/eRestaurant/' },
+      { text: 'Demos', link: '/demos/' },
        {text: 'MS SQL 2017', link: '/about/slides-installing-sql-server' },
       { text: 'Take Home', link: '/exercises/'},
       { text: 'Issues/Bugs', link: 'https://github.com/DMIT-2018/StudentNotes/issues/new' },
