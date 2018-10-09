@@ -12,17 +12,17 @@ This example of C# Statements in LinqPad include both LINQ Queries on database t
 ```csharp
 /* Example 1: Querying data from Northwind */
 var result = from row in Products
-			 where row.UnitPrice > 50
-			 select row;
+             where row.UnitPrice > 50
+             select row;
 
 // The following line won't work in your VS project....
 result.Dump(); // the .Dump() method is an extension method in LinqPad - it's not in .NET
-			   /* Example 2: Query a simple array of strings */
+               /* Example 2: Query a simple array of strings */
 string[] names = { "Dan", "Don", "Sam", "Dwayne", "Laurel", "Steve" };
 names.Dump();
 var shortList = from person in names
-				where person.StartsWith("D")
-				select person;
+                where person.StartsWith("D")
+                select person;
 shortList.Dump();
 
 /* Example 3: Find the Orders that are due to be shipped */
@@ -49,29 +49,31 @@ LinqPad allows you to set a title for your output by sending a string into the `
 The following query shows the total income for the previous month and the number of patrons served.
 
 ```csharp
-// Get the following from the Bills table for the past month:
-// BillDate, ID, people served, total potentially billable (BillItem.Quantity * BillItem.UnitCost),
-// and actual amount billed
-// Then display the total income for the month and the number of patrons served.
-var billsThisMonth = from item in Bills
-                     where item.PaidStatus 
-                     && item.BillDate.Month == DateTime.Today.Month -1
-                     && item.BillDate.Year == DateTime.Today.Year
-                     orderby item.BillDate descending
+// Get the following from the Orders table for a specific month:
+// OrderDate, ID, count of distinct items, total sale
+// for items that have been shipped
+// Then display the total income for the month and the average line items.
+DateTime searchPeriod = new DateTime(1998,1,1);
+var billsThisMonth = from item in Orders
+                     where item.ShippedDate.HasValue
+                     && item.OrderDate.Value.Month == searchPeriod.Month
+                     && item.OrderDate.Value.Year == searchPeriod.Year
+                     orderby item.OrderDate descending
                      select new
                      {
-                         BillDate = item.BillDate,
-                         BillId = item.BillID,
-                         NumberInParty = item.NumberInParty,
-                         TotalBillable = item.BillItems.Sum (bi => bi.Quantity * bi.UnitCost),
-                         ActualBillTotal = item.BillItems.Sum (bi => bi.Quantity * bi.SalePrice)
+                         OrderDate = item.OrderDate,
+                         OrderId = item.OrderID,
+                         DistinctItems = item.OrderDetails.Count,
+                         TotalSale = item.OrderDetails.Sum(od => od.Quantity * od.UnitPrice)
                      };
-var title  = string.Format("Total income for {0} {1}",DateTime.Today.AddMonths(-1).ToString("MMMM"),DateTime.Today.Year);
-billsThisMonth.Sum (tm => tm.ActualBillTotal).ToString("C").Dump(title, true);
-billsThisMonth.Sum (tm => tm.NumberInParty).Dump("Patrons served", true);
+
+var title = string.Format("Total income for {0} {1}", searchPeriod.ToString("MMMM"), searchPeriod.Year);
+// billsThisMonth.Dump();
+billsThisMonth.Sum(tm => tm.TotalSale).ToString("C").Dump(title, true);
+billsThisMonth.Average(tm => tm.DistinctItems).Dump("Average Line Items", true);
 ```
 
-![Statement example 2 - Results](LinqPad/results/Statements-2.png)
+![Statement example 2 - Results](./results/Statements-2.png)
 
 ---
 
@@ -80,38 +82,38 @@ billsThisMonth.Sum (tm => tm.NumberInParty).Dump("Patrons served", true);
 With LinqPad, you can incrementally build your queries in multiple statements.
 
 ```csharp
-// Get the following from the Bills table for the current month:
-// BillDate, ID, people served, total potentially billable (BillItem.Quantity * BillItem.UnitCost),
-// and actual amount billed
-// Then display the total income for the month and the number of patrons served.
-var billsThisMonth = from item in Bills
-                     where item.PaidStatus 
-                     && item.BillDate.Month == DateTime.Today.Month - 1
-                     && item.BillDate.Year == DateTime.Today.Year
-                     orderby item.BillDate descending
+// Get the following from the Orders table for a specific month:
+// OrderDate, ID, count of distinct items, total sale
+// for items that have been shipped
+// Then display the total income for the month and the average line items.
+DateTime searchPeriod = new DateTime(1998,1,1);
+var billsThisMonth = from item in Orders
+                     where item.ShippedDate.HasValue
+                     && item.OrderDate.Value.Month == searchPeriod.Month
+                     && item.OrderDate.Value.Year == searchPeriod.Year
+                     orderby item.OrderDate descending
                      select new
                      {
-                         BillDate = item.BillDate,
-                         BillId = item.BillID,
-                         NumberInParty = item.NumberInParty,
-                         TotalBillable = item.BillItems.Sum (bi => bi.Quantity * bi.UnitCost),
-                         ActualBillTotal = item.BillItems.Sum (bi => bi.Quantity * bi.SalePrice)
+                         OrderDate = item.OrderDate,
+                         OrderId = item.OrderID,
+                         DistinctItems = item.OrderDetails.Count,
+                         TotalSale = item.OrderDetails.Sum(od => od.Quantity * od.UnitPrice)
                      };
-var title  = string.Format("Total income for {0} {1}",DateTime.Today.AddMonths(-1).ToString("MMMM"),DateTime.Today.Year);
-billsThisMonth.Sum (tm => tm.ActualBillTotal).ToString("C").Dump(title, true);
-billsThisMonth.Sum (tm => tm.NumberInParty).Dump("Patrons served", true);
+
+var title = string.Format("Total income for {0} {1}", searchPeriod.ToString("MMMM"), searchPeriod.Year);
+// billsThisMonth.Dump();
+billsThisMonth.Sum(tm => tm.TotalSale).ToString("C").Dump(title, true);
+billsThisMonth.Average(tm => tm.DistinctItems).Dump("Average Line Items", true);
+
 var report = from item in billsThisMonth
-             group item by item.BillDate.Day into dailySummary
+             group item by item.OrderDate.Value.Day into dailySummary
              select new
              {
-                Day = dailySummary.Key,
-                DailyPatrons = dailySummary.Sum(s => s.NumberInParty),
-                Income = dailySummary.Sum (s => s.ActualBillTotal)
+                 Day = dailySummary.Key,
+                 LineItems = dailySummary.Sum(s => s.DistinctItems),
+                 Income = dailySummary.Sum(s => s.TotalSale)
              };
-report.OrderBy (r => r.Day).Dump("Daily Income");
-// extra diagnostics/details
-// billsThisMonth.Take(5).Dump("Top Five bills in collection");
-// Bills.Single(b => b.BillID == 21194).BillItems.Dump("Bill Items on Bill # 21194");
+report.OrderBy(r => r.Day).Dump("Daily Income");
 ```
 
-![Statement example 3 - Results](LinqPad/results/Statements-3.png)
+![Statement example 3 - Results](./results/Statements-3.png)
