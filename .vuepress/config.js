@@ -81,12 +81,12 @@ module.exports = {
         // { text: 'Writing a Maintenance Plan', link: '' }
       ],
 
-      '/demos/': [
-        '',
-        'eRestaurant/',
-        'Northwind/',
-        'Chinook/'
-      ],
+      // '/demos/': [
+      //   '',
+      //   'eRestaurant/',
+      //   'Northwind/',
+      //   'Chinook/'
+      // ],
 
       '/demos/Chinook/': [
         '',
