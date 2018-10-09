@@ -95,6 +95,7 @@ module.exports = {
       ],
 
       '/demos/Northwind/': [
+        '',
         'linq/LinqPad/expressions',
         'linq/LinqPad/statements',
         'linq/LinqPad/program'
