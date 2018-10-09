@@ -81,6 +81,13 @@ module.exports = {
         // { text: 'Writing a Maintenance Plan', link: '' }
       ],
 
+      '/demos/': [
+        '',
+        'eRestaurant/',
+        'Northwind/',
+        'Chinook/'
+      ],
+
       '/demos/Chinook/': [
         '',
         'entityDemo',
@@ -88,7 +95,9 @@ module.exports = {
       ],
 
       '/demos/Northwind/': [
-        ''
+        'linq/LinqPad/expressions',
+        'linq/LinqPad/statements',
+        'linq/LinqPad/program'
       ],
 
       '/demos/eRestaurant/': [
