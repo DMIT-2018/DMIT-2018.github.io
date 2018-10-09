@@ -37,7 +37,7 @@ allBills.Count().Dump(); // show the count of items
 allBills.Take(5).Dump(); // show the first 5 bills
 ```
 
-![Statements example 1 - Results](LinqPad/results/Statements-1.png)
+![Statements example 1 - Results](./results/Statements-1.png)
 
 ---
 
@@ -70,7 +70,7 @@ billsThisMonth.Sum (tm => tm.ActualBillTotal).ToString("C").Dump(title, true);
 billsThisMonth.Sum (tm => tm.NumberInParty).Dump("Patrons served", true);
 ```
 
-![Statement example 2 - Results](LinqPad/results/Statements-2.png)
+![Statement example 2 - Results](./results/Statements-2.png)
 
 ---
 
@@ -113,4 +113,4 @@ report.OrderBy (r => r.Day).Dump("Daily Income");
 // Bills.Single(b => b.BillID == 21194).BillItems.Dump("Bill Items on Bill # 21194");
 ```
 
-![Statement example 3 - Results](LinqPad/results/Statements-3.png)
+![Statement example 3 - Results](./results/Statements-3.png)
