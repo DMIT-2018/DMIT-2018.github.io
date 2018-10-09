@@ -43,4 +43,4 @@ public class MenuItem
 }
 ```
 
-![Program example 1 - Results](LinqPad/results/Program-1.png)
+![Program example 1 - Results](./results/Program-1.png)
