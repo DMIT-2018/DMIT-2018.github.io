@@ -81,6 +81,16 @@ module.exports = {
         // { text: 'Writing a Maintenance Plan', link: '' }
       ],
 
+      '/demos/Chinook/': [
+        '',
+        'entityDemo',
+        ''
+      ],
+
+      '/demos/Northwind/': [
+        ''
+      ],
+
       '/demos/eRestaurant/': [
         '',
         'about/',
