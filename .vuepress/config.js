@@ -32,7 +32,8 @@ module.exports = {
         '',
         'LOGs',
         'bootstrapInVS2013',
-        'changeLog'
+        'changeLog',
+        'troubleshoot'
       ],
       '/exercises/' :[
         '',
