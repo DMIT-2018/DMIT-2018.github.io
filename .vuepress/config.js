@@ -31,6 +31,7 @@ module.exports = {
       '/about/': [
         '',
         'LOGs',
+        'resources',
         'bootstrapInVS2013',
         'changeLog',
         'troubleshoot'
