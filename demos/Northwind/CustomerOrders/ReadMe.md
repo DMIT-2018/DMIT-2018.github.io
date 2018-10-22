@@ -15,7 +15,7 @@ The screen mockups in the following sections describe the planned user experienc
 
 ## Open the Sales Page
 
-The first visit to the Sales page simply displays a list of existing customers the the employee can select from to view the customer's order history or to create a new order for the customer.
+The first visit to the Sales page simply displays a list of existing customers that the employee can select from to view the customer's order history or to create a new order for the customer.
 
 > ![Sales Page - First Visit](./images/First-Visit.png)
 
