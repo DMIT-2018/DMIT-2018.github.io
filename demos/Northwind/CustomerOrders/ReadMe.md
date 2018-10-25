@@ -263,7 +263,6 @@ private void UpdatePendingOrder(EditCustomerOrder order)
         {
             var changes = order.OrderItems.SingleOrDefault(x => x.ProductId == detail.ProductID);
             if (changes == null)
-                //toRemove.Add(detail);
                 context.Entry(detail).State = EntityState.Deleted; // flag for deletion
             else
             {
@@ -276,15 +275,19 @@ private void UpdatePendingOrder(EditCustomerOrder order)
         //    Loop through the new items to add to the database
         foreach (var item in order.OrderItems)
         {
-            // Add as a new item
-            var newItem = new OrderDetail
+            bool notPresent = !orderInProcess.Order_Details.Any(x => x.ProductID == item.ProductId);
+            if (notPresent)
             {
-                ProductID = item.ProductId,
-                Quantity = item.OrderQuantity,
-                UnitPrice = item.UnitPrice,
-                Discount = item.DiscountPercent
-            };
-            orderInProcess.OrderDetails.Add(newItem);
+                // Add as a new item
+                var newItem = new Order_Detail
+                {
+                    ProductID = item.ProductId,
+                    Quantity = item.OrderQuantity,
+                    UnitPrice = item.UnitPrice,
+                    Discount = item.DiscountPercent
+                };
+                orderInProcess.Order_Details.Add(newItem);
+            }
         }
 
         // C) Save the changes (one save, one transaction)
