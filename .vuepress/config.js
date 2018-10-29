@@ -101,7 +101,8 @@ module.exports = {
         'linq/LinqPad/expressions',
         'linq/LinqPad/statements',
         'linq/LinqPad/program',
-        'CustomerOrders/'
+        'CustomerOrders/',
+        'Security/'
       ],
 
       '/demos/eRestaurant/': [
