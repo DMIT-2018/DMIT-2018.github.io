@@ -7,10 +7,15 @@ title: ASP.Net Identity
 
 ## Customizing the `ApplicationUser`
 
+In order to associate  a website user (`ApplicationUser`) with a particular employee or customer of Northwind, we will add a couple of properties to the `ApplicationUser` class that effectively work as "nullable foreign key" references to the `Employees` and `Customers` tables (though, without any foreign key constraints).
+
+These new properties in the `ApplicationUser` will be generated as columns in the `AspNetUsers` database table.
+
 ```csharp
-public class ApplicationUserManager : UserManager<ApplicationUser>
+public class ApplicationUser : IdentityUser
 {
     #region Custom Properties
+    // An application user, in this web app, can be either an Employee or a Customer
     public int? EmployeeId { get; set; }
     public string CustomerId { get; set; }
     #endregion
@@ -21,15 +26,21 @@ public class ApplicationUserManager : UserManager<ApplicationUser>
 
 ## Seeding the Database
 
+Generally, it's a good idea to ensure that your web application's database is pre-populated with any security roles and default users that your application will need. Specifically, you should consider specifying some user to be the "webmaster" for the site. The following sections detail one good way to accomplish this.
+
 ### AppSettings
+
+The `<appSettings>` section of the `Web.config` file is a good place to put application-specific settings that you might want to be changing on the production site. The reason for using a configuration file is that it is simply a text file, and can be edited in any text editor such as NotePad. Also, the web server (IIS) will secure the `.config` files, make sure not to directly expose them to anyone via a web browser.
+
+In the code below, a number of startup security roles are specified, along with details for the administrator account and other notable accounts. There's even a default password for when we want to programmatically add new users to the site.
 
 ```xml
   <appSettings>
+    <add key="startupRoles" value="Administrators;Employees;Customers;RegisteredUsers" />
     <add key="adminUserName" value="Webmaster" />
     <add key="adminEmail" value="Webmaster@Northwind.tba" />
     <add key="adminPassword" value="Pa$$w0rd" />
     <add key="adminRole" value="Administrators" />
-    <add key="startupRoles" value="Administrators;Employees;Customers;RegisteredUsers" />
     <add key="customerRole" value="Customers" />
     <add key="employeeRole" value="Employees" />
     <add key="newUserPassword" value="Pa$$word1" />
@@ -38,7 +49,9 @@ public class ApplicationUserManager : UserManager<ApplicationUser>
 
 ### Database Initializer
 
-> Check out the following tutorial about [Database Initialization Strategies in EF6](http://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx).
+Since ASP.Net Identity with Entity Framework is already configured to generate the security tables if they do not exist, a good plan to prepopulate the database is to use a **database initialization** class to do the work. The following is a simple example that uses the data from our `web.config` file to add those users and roles.
+
+> Check out this tutorial about [Database Initialization Strategies in EF6](http://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx).
 
 ```csharp
 public class SecurityDbContextInitializer : CreateDatabaseIfNotExists<ApplicationDbContext>
@@ -47,9 +60,7 @@ public class SecurityDbContextInitializer : CreateDatabaseIfNotExists<Applicatio
     protected override void Seed(ApplicationDbContext context)
     {
         #region Seed the roles
-        string adminRole = ConfigurationManager.AppSettings["adminRole"];
         var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-        roleManager.Create(new IdentityRole { Name = adminRole });
         var startupRoles = ConfigurationManager.AppSettings["startupRoles"].Split(';');
         foreach(var role in startupRoles)
             roleManager.Create(new IdentityRole { Name = role });
@@ -57,12 +68,15 @@ public class SecurityDbContextInitializer : CreateDatabaseIfNotExists<Applicatio
 
         #region Seed the users
         string adminUser = ConfigurationManager.AppSettings["adminUserName"];
+        string adminRole = ConfigurationManager.AppSettings["adminRole"];
+        string adminEmail = ConfigurationManager.AppSettings["adminEmail"];
+        string adminPassword = ConfigurationManager.AppSettings["adminPassword"];
         var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
         var result = userManager.Create(new ApplicationUser
         {
             UserName = adminUser,
-            Email = ConfigurationManager.AppSettings["adminEmail"]
-        }, ConfigurationManager.AppSettings["adminPassword"]);
+            Email = adminEmail
+        }, adminPassword);
         if (result.Succeeded)
             userManager.AddToRole(userManager.FindByName(adminUser).Id, adminRole);
         #endregion
@@ -77,6 +91,8 @@ public class SecurityDbContextInitializer : CreateDatabaseIfNotExists<Applicatio
 
 ### Modifying `ApplicationDbContext`
 
+In order for our database context to use the initializer we created in the previous step, we need to specify that in the constructor for our `ApplicationDbContext`.
+
 ```csharp
 public ApplicationDbContext()
     : base("DefaultConnection", throwIfV1Schema: false)
@@ -85,7 +101,15 @@ public ApplicationDbContext()
 }
 ```
 
+----
+
+## Managing Users and Roles
+
+The starter template for using ASP.Net Identity does not include a UI for managing users and roles. The following is a simple user/role management plan for Northwind Traders. It includes a `SecurityController` to act as a BLL in front of ASP Identity's UserManager and RoleManager, as well as a simple CRUD-based UI.
+
 ## Security Controller (CRUD)
+
+This controller class provides basic CRUD-like services for users and roles.
 
 ```csharp
 [DataObject]
