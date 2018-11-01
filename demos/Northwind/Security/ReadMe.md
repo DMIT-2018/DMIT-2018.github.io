@@ -5,7 +5,13 @@ title: ASP.Net Identity
 
 > This discussion about using the built-in security features of ASP.Net Identity 2.x assume a **Web Application Project** using *Web Forms*. While details may vary for different starter templates, the general concepts remain the same.
 
+When you create a new web application project, you have the opportunity to specify the authentication for the application. The "Individual User Accounts" option is the one that makes use of ASP.Net Identity.
 
+![Change Authentication](./ChangeAuthentication.png)
+
+Two files contain the classes that you can edit which build on ASP.Net Identity. They are the `IdentityConfig.cs` file (which holds the `ApplicationUserManager` class, among others) and the `IdentityModel.cs` file (which holds the `ApplicationUser` and `ApplicationDbContext` classes). It is this latter file that we will be editing to customize ASP Identity for our site.
+
+![Identity Classes](./IdentityClasses.png)
 
 ## Customizing the `ApplicationUser`
 
@@ -51,7 +57,7 @@ In the code below, a number of startup security roles are specified, along with 
 
 ### Database Initializer
 
-Since ASP.Net Identity with Entity Framework is already configured to generate the security tables if they do not exist, a good plan to prepopulate the database is to use a **database initialization** class to do the work. The following is a simple example that uses the data from our `web.config` file to add those users and roles.
+Since ASP.Net Identity with Entity Framework is already configured to generate the security tables if they do not exist, a good plan to prepopulate the database is to use a **database initialization** class to do the work. The following is a simple example that uses the data from our `web.config` file to add those users and roles. You can place this file anywhere in the web application; for my purposes, I placed it under the `~\Admin\Security\` folder.
 
 > Check out this tutorial about [Database Initialization Strategies in EF6](http://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx).
 
@@ -88,7 +94,6 @@ public class SecurityDbContextInitializer : CreateDatabaseIfNotExists<Applicatio
         base.Seed(context);
     }
 }
-
 ```
 
 ### Modifying `ApplicationDbContext`
@@ -103,6 +108,19 @@ public ApplicationDbContext()
 }
 ```
 
+It's a good idea at this time to also edit the `Web.config` file to point the `DefaultConnection` to your actual database. In this case, it's pointing to the same Northwind database used by the rest of the application.
+
+```xml
+  <connectionStrings>
+    <add name="DefaultConnection"
+         connectionString="Data Source=.;Initial Catalog=Northwind_DMIT2018;Integrated Security=true"
+         providerName="System.Data.SqlClient" />
+    <add name="NW2018"
+         connectionString="Data Source=.;Initial Catalog=Northwind_DMIT2018;Integrated Security=true"
+         providerName="System.Data.SqlClient" />
+  </connectionStrings>
+```
+
 ----
 
 ## Managing Users and Roles
@@ -111,7 +129,7 @@ The starter template for using ASP.Net Identity does not include a UI for managi
 
 ## Security Controller (CRUD)
 
-This controller class provides basic CRUD-like services for users and roles.
+This controller class provides basic CRUD-like services for users and roles. You can place this file anywhere in the web application; for my purposes, I placed it under the `~\Admin\Security\` folder.
 
 ```csharp
 [DataObject]
@@ -219,7 +237,7 @@ public class SecurityController
 
 ## Security Management UI
 
-The user interface for managing application users and security roles is fairly simple at this stage, providing a way to do simple CRUD operations.
+The user interface for managing application users and security roles is fairly simple at this stage, providing a way to do simple CRUD operations. Once again, you can place this file anywhere in the web application; I placed it under the `~\Admin\Security\` folder along with the `SecurityController.cs` file.
 
 ![Security/Default.aspx](./SecurityDefault.png)
 
