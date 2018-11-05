@@ -186,7 +186,9 @@ public class EditCustomerOrder
 
 ## Saving Customer Orders
 
-Saving a customer order is done to preserve changes to an order while keeping it open (i.e., not setting the `OrderDate`). The customer order to be saved may be a new order or an existing open order. Both of these are handled by a single public BLL method, which internally shunts the main work of saving to two alternate private methods.
+Saving a customer order is done to preserve changes to an order while keeping it open (i.e., not setting the `OrderDate`). The customer order to be saved may be a new order or an existing open order. Both of these are handled by a single public BLL method, which internally shunts the main work of saving to two alternate private methods. Each private method ensures that their specific tasks are performed as **transactions** that succeed or fail as a group. The following sequence diagrm roughly illustrates the process.
+
+![Save Customer Order - Sequence Diagram](./images/Northwind-CustomerSales-Save.png)
 
 ```csharp
 public void Save(EditCustomerOrder order)
