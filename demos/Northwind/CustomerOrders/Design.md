@@ -3,7 +3,7 @@ title: Customer Orders Design Plan
 ---
 # Customer Orders - Design Plan
 
-Yellow 
+> **Notes:** Columns highlighted yellow on ERDs are for queries, while columns highlighted blue are for commands.
 
 ## Page Load
 
