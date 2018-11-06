@@ -49,18 +49,48 @@ public List<CustomerOrder> GetOrdersByCustomer(string customerId, string filter)
 
 ## Starting New/Existing Order
 
-```csharp
-
-```
+Both the new and existing ("open") customer orders involve querying data from multiple tables.
 
 ![](./images/Query-Open-Order.png)
+
+> **Shippers** (`<asp:DropDownList>`)
+
+```csharp
+[DataObjectMethod(DataObjectMethodType.Select)]
+public List<KeyValueOption> GetShippers()
+```
+
+> **Add Products** (`<asp:DropDownList>`) - filtered to only show products not currently on the order
+
+```csharp
+// SalesController class
+[DataObjectMethod(DataObjectMethodType.Select)]
+public List<KeyValueOption> GetProducts()
+```
+
+### Existing Order
+
+> **Select Existing Order** (GridView's `SelectedIndexChanged` event)
+
+```csharp
+// SalesController class
+public CustomerOrderWithDetails GetExistingOrder(int orderId)
+```
+
+### New Order
+
+> **New Order** button (`<asp:ListView>` is an empty list of `CustomerOrderWithDetails` POCO class)
+
 
 ----
 
 ## Saving Order
 
-```csharp
+Saving the order means gathering all the order data from the form and calling a single BLL method to perform the transaction.
 
+```csharp
+// SalesController class
+public void Save(EditCustomerOrder order)
 ```
 
 ![](./images/Command-Save-Order.png)
@@ -69,3 +99,9 @@ public List<CustomerOrder> GetOrdersByCustomer(string customerId, string filter)
 
 ## Placing Customer Order
 
+Placing the order also means gathering all the order data from the form and calling a single BLL method to perform a transaction.
+
+```csharp
+// SalesController class
+public void PlaceOrder(EditCustomerOrder order)
+```
