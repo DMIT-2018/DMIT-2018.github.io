@@ -21,7 +21,4 @@ Managment has requested a report detailing orders by customer. The report is to 
 
 Extended Price: Create this field in your report POCO as a read-only field.
 
-![Picking List Data Entry](./reports/reportimage.PNG)
-
-
-
+![Picking List Data Entry](./reports/report_image.png)
