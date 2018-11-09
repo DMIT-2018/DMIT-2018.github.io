@@ -9,9 +9,7 @@ Be aware that this is the continuation of the GroceryList exercises - you must b
 
 #### Setup
 
-You will need to have SSDT (Microsoft Sql Server Data Tools) installed on your home machine to complete this exercise outside of class. 
-
-![Installing SSDT}](./reports/install_ssdt.md)
+You will need to have SSDT (Microsoft Sql Server Data Tools) installed on your home machine to complete this exercise outside of class. Read the [Installing SSDT](./reports/install_ssdt.md) document for details.
 
 #### GroceryList ERD
 
