@@ -28,21 +28,20 @@ title: Install SSDT
 ## Part C – Use the Report Viewer in your Projects
 
 1. Open a solution with a Web Application project.
-2. Open NuGet Manager. Browse. Search for Report. Install `Microsoft.Report.Viewer`.
+2. Open NuGet Manager. Browse.  
+    1. Search for Microsoft.Report.Viewer. Install `Microsoft.Report.Viewer` by Microsoft.
     - ![](./media/image8.png)
-3. The ReportViewer control may or may not be listed in your Toolbox. Ensure the current ReportViewer control is present by doing the following:
-    1. Tools - NuGet Package Manager - Package Manager Console
-    2. Run the following command  
-        - `Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms -Pre`
-    3. Add a new control to the toolbox
-        - Right Click on the toolbox under General; select Add Tab; Name it `Reporting`
-        - Right click in the new tab; select Choose Items...
-        - Click the Browse... button
-        - Navigate to your solution directory's packages folder
-            - ![](./media/image9.png)
-            - ![](./media/image10.png)
-4. Right Click project Add New Item. Search report. Select Report Wizard. Press OK. Press Trust.
+    2. Search for Microsoft.SqlServer.Types. Install `Microsoft.SqlServer.Types version 11.0.0` by Microsoft.  
+    - ![](./media/image9.png)
+3. Add the follow handler tag to your web.config file under the system.webServer tag.
+    - ![](./media/image10.png)
+4. Right Click project Add New Item. Search report. Select Report Wizard. Press OK. Yoou my be presented with a trust dialog; Press Trust.
 5. You should be presented with the following form. Drop down Data source. There should be a list of data sources. 
     - ![](./media/image11.png)
-6. Press cancel.
-7. Report services are now installed.
+6. Create your report.
+7. Open a web page which will display your report.
+8. The ReportViewer control will not be visible in your Toolbox until you have a report .rdlc file in your project. You will get two new groups in the Toolbox. You will find the ReportViewer control under the Microsoft Report Viewer 2012.
+    - ![](./media/image12.png)
+9. Create an ODS to point to your BLL method which produces the POCO for your report.
+10. Drag a ReportViewer control from Microsoft Report Viewer 2012 onto your web page. The following image show the setup for the ReportViewer control. Type in the parameter details for the ReportViewer control following the path in the image below.
+    - ![](./media/image13.png)
