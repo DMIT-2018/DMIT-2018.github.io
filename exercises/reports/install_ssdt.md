@@ -44,5 +44,5 @@ title: Install SSDT
     - **Note:** If you do not see the ReportViewer control in your Toolbox, you will need to manually add the following register directive just under the page directive on your .aspx page: `<%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>`
     - ![](./media/image12.png)
 9. Create an ODS to point to your BLL method which produces the POCO for your report.
-10. Drag a ReportViewer control from Microsoft Report Viewer 2012 onto your web page. The following image show the setup for the ReportViewer control. Type in the parameter details for the ReportViewer control following the path in the image below.
+10. Add a ReportViewer control to your page by either typing it out or dragging it from the Toolbox onto your web page. The following image shows the setup for the ReportViewer control. Type in the tag details for the ReportViewer control as demonstrated in the image below.
     - ![](./media/image13.png)
