@@ -42,8 +42,7 @@ module.exports = {
         'dvcs',
         'ef',
         'linq',
-        'oltp',
-        'reporting'
+        'oltp'
       ],
 
       '/topics/': [
