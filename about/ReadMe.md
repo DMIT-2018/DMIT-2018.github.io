@@ -25,11 +25,12 @@ To complete this course, it is recommended that you install the following softwa
   - Web Essentials 2017
   - SQL Server Data Tools
   - xUnit (optional)
-- Azure SDK (optional)
 - SQL Server 2017, Developer Edition
   - [This slideshow](slides-installing-sql-server.html) shows the important parts of installing SQL Server 2017.
 - GitHub Desktop
 - LinqPad
+- [Draw.io](https://about.draw.io/integrations/#integrations_offline)
+- Azure SDK (optional)
 
 ## Reporting Bugs
 
