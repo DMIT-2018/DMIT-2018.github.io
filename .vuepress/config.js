@@ -23,7 +23,7 @@ module.exports = {
       { text: 'Notes', link: '/topics/' },
       { text: 'Demos', link: '/demos/' },
       // { text: 'Lab Specs', link: 'https://DMIT-2018.github.io/LabSpecs' },
-      { text: 'MS SQL 2017', link: 'https://github.com/DMIT-2018/about/slides-installing-sql-server.html' },
+      { text: 'MS SQL 2017', link: 'https://dmit-2018.github.io/about/slides-installing-sql-server.html' },
       { text: 'Take Home', link: '/exercises/'},
       { text: 'Issues/Bugs', link: 'https://github.com/DMIT-2018/StudentNotes/issues/new' },
       { text: 'Moodle', link: 'https://moodle.nait.ca' },
