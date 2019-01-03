@@ -26,7 +26,7 @@ To complete this course, it is recommended that you install the following softwa
   - SQL Server Data Tools
   - xUnit (optional)
 - SQL Server 2017, Developer Edition
-  - [This slideshow](slides-installing-sql-server.html) shows the important parts of installing SQL Server 2017.
+  - [This slideshow](https://github.com/DMIT-2018/about/slides-installing-sql-server.html) shows the important parts of installing SQL Server 2017.
 - GitHub Desktop
 - LinqPad
 - [Draw.io](https://about.draw.io/integrations/#integrations_offline)
