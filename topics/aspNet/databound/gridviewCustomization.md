@@ -84,12 +84,12 @@ You will note that the Tuition column should have its Tuition format altered to 
 
 ```xml
 <asp:TemplateField HeaderText="$">
-                <ItemTemplate>
-                    <asp:TextBox ID="Tuition" runat="server"
-                        Text='<%# string.Format("{0:c}",Eval("Tuition")) %>'
-                        Columns="8" ></asp:TextBox>
-                </ItemTemplate>
-            </asp:TemplateField>
+    <ItemTemplate>
+        <asp:TextBox ID="Tuition" runat="server"
+            Text='<%# string.Format("{0:c}",Eval("Tuition")) %>'
+            Columns="8" ></asp:TextBox>
+    </ItemTemplate>
+</asp:TemplateField>
 ```
 
 Alignment of column header and data can be adjusted using the GridView Edit Columns dialog. Open the dialog and select the CRD field under Selected Fields. Go to the Styles group of the properties. Under the HeaderStyle and ItemStyle you will find horizontal alignment properties. Change these to right aligned. Switch to the Active field and change the ItemStyle to be center aligned.
@@ -100,14 +100,14 @@ Paging can be implemented inn two ways, manually using code-behind (PageIndexCha
 
 ```csharp
 protected void CourseResultList_PageIndexChanging(object sender, GridViewPageEventArgs e)
-    {
-        // set the new page index on the Gridview
-        CourseResultList.PageIndex = e.NewPageIndex;
+{
+    // set the new page index on the Gridview
+    CourseResultList.PageIndex = e.NewPageIndex;
 
-        //refresh the GridView from its data source
-        ToolsController systemmgr = new ToolsController();
-        List<Course> courseInfo = systemmgr.GetCourses();
-        CourseResultList.DataSource = courseInfo;
-        CourseResultList.DataBind();
-    }
+    //refresh the GridView from its data source
+    ToolsController systemmgr = new ToolsController();
+    List<Course> courseInfo = systemmgr.GetCourses();
+    CourseResultList.DataSource = courseInfo;
+    CourseResultList.DataBind();
+}
 ```
