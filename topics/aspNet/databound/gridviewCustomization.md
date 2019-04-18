@@ -96,7 +96,19 @@ Alignment of column header and data can be adjusted using the GridView Edit Colu
 
 ### Paging
 
-Paging can be implemented inn two ways, manually using code-behind (PageIndexChanging event) or by selecting paging from the GridView smart-tag (auto-implemented). Coding your own paging event should be considered if you have additional work that needs to be done when your GridView pages. Otherwise, simply selecting paging from the GridView smart-tag will allow paging to happen. the default for the paging properties is numeric page numbers, 10 page numbers before having the ... appear, and 10 rows per page. You may change paging properties using the Paging group of the GridView.
+Paging can be implemented in two ways, manually using code-behind (PageIndexChanging event) or by selecting paging from the GridView smart-tag (auto-implemented). Coding your own paging event should be considered if you have additional work that needs to be done when your GridView pages. Otherwise, simply selecting paging from the GridView smart-tag will allow paging to happen.
+
+
+
+The default for the paging properties is
+
+- numeric page numbers,
+- 10 page numbers before having the elipsis (`...`) appear,
+- and 10 rows per page.
+
+You may change paging properties using the Paging group of the GridView.
+
+If you are programmatically populating your GridView, and you have paging, then you will need to handle the `OnPageIndexChanging` event on the control. The following sample shows how to use that event to set up the new page index and re-populate your control.
 
 ```csharp
 protected void CourseResultList_PageIndexChanging(object sender, GridViewPageEventArgs e)
