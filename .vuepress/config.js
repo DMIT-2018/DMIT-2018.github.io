@@ -49,6 +49,7 @@ module.exports = {
         '',
         'dvcs/',
         'dvcs/gh4w',
+        'dvcs/conflicts/',
         'xml/',
         'sitemaps/',
         'linq/',
