@@ -9,7 +9,7 @@ This is a first-draft article on resolving merge conflicts. In this walkthrough,
 
 > This walkthrough on resolving merge conflicts assumes that you have the following installed on your computer.
 >
-> - Visual Studio 2017 or later
+> - [Visual Studio 2017](https://visualstudio.microsoft.com/) or later
 > - [GitHub Desktop](https://desktop.github.com)
 > - [Visual Studio Code](https://code.visualstudio.com)
 >
