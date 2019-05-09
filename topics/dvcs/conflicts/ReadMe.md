@@ -75,7 +75,7 @@ From the *Synchronization* page of Team Explorer, click the "Resolve the conflic
 
 ![Step ](./Step9.png)
 
-The *Resolve Conflicts* page in Team Explorer reveals that the conflict resides in the "README.md" file. For this file, we are provided with various links to view comparisons of the conflict or just simply take one of the conflicting versions and discard the other. For our purposes, will want to click "Compare Files" to see the details of the conflict.
+The *Resolve Conflicts* page in Team Explorer reveals that the conflict resides in the "README.md" file. Clicking on the "README.md" file listed in the conflicts will expand it for further actions; do so now. For this file, we are provided with various links to view comparisons of the conflict or just simply take one of the conflicting versions and discard the other. For our purposes, will want to click "Compare Files" to see the details of the conflict.
 
 ![Step ](./Step11.png)
 
