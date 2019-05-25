@@ -42,7 +42,7 @@ module.exports = {
         'dvcs',
         // page w. link to conflict resolution github repo
         'ef',
-        //'linq',
+        'linq',
         //'oltp' // split into two
       ],
 
