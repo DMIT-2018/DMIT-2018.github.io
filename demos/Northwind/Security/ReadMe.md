@@ -101,6 +101,9 @@ public class SecurityDbContextInitializer : CreateDatabaseIfNotExists<Applicatio
 In order for our database context to use the initializer we created in the previous step, we need to specify that in the constructor for our `ApplicationDbContext`.
 
 ```csharp
+using System.Data.Entity; // needed for the extension method .SetInitializer()
+// other code....
+
 public ApplicationDbContext()
     : base("DefaultConnection", throwIfV1Schema: false)
 {
