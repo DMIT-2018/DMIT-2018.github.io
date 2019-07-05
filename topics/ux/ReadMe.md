@@ -7,13 +7,13 @@ UX (or *U*ser e*X*perience) is fundamentally about giving the user a pleasant ex
 
 ## UX Data-Driven Applications
 
-A data-driven application is simply a program that is supported by a database for back-end storage of information. Storing and retrieving information with a database is all about CRUD - making sure that way we handle information in storage will ensure the general integrity of the data (i.e.: that normal accessing of the data will not inadvertantly corrupt it). But how information is *packaged* for storage (i.e. - organized as tables) is entirely different from how it is *unpacked* and *used* in normal activities (i.e. - DTOs, POCOs, etc.).
+A data-driven application is simply a program that is supported by a database for back-end storage of information. Storing and retrieving information with a database is all about CRUD - making sure that way we handle information in storage will ensure the general integrity of the data (i.e.: that regular maintenance of the data will not inadvertantly corrupt it). But how information is *packaged* for storage (i.e. - normalized into related tables) is entirely different from how it is *unpacked*, *used* and *moved* around in the application (i.e. - DTOs, POCOs, etc.).
 
 In building data-driven applications, it's important to consider how the data is going to be *displayed to* and *used by* the end-user. Remember, the database is designed to work well for data **storage**, not presentation. It's not unusual for the *shape* or structure of the data to appear differently in a user interface than how it is structured for data storage.
 
 ## Designing Data-Driven Applications
 
-When it comes to *designing* the parts of an application that allow users work with their data-centric needs, you want to create something that is **focused** or **targetted** on the task that they want to accomplish while keeping the interactions **succinct** and **informative**.
+When it comes to *designing* the parts of an application that allow users to work with their data-centric needs, you want to create something that is **focused** or **targetted** on the task that they want to accomplish while keeping the interactions **succinct** and **informative**.
 
 How do we accomplish this? What steps should we follow to make this happen? If you are designing within the constraints of an established state-based database as the backing store, let me suggest the following steps:
 
