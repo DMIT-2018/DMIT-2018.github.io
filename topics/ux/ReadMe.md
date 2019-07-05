@@ -62,8 +62,8 @@ In the **Login Form**, the display vs input distinction is fairly self-evident. 
 
 In the **Initial Profile Form**, however, we might want to display the person's `UserName` while having them input their `FirstName`, `LastName`, `Password`, and `PasswordConfirmation`.
 
-::: tip
-NOTE: These distinctions between displaying and entering data fit in nicely with **CQRS** (Command-Query Responsibility Segregation). Any time we have database information to display to the user, it can be obtained as a *Query*, while information that the user gives us for processing and storing in the database can be packaged as a *Command*. A formal CQRS implementation would package the query and command as objects, but in the sample requirements given above this formal structuring is not strictly required.
+::: tip NOTE:
+These distinctions between displaying and entering data fit in nicely with **CQRS** (Command-Query Responsibility Segregation). Any time we have database information to display to the user, it can be obtained as a *Query*, while information that the user gives us for processing and storing in the database can be packaged as a *Command*. A formal CQRS implementation would package the query and command as objects, but in the sample requirements given above this formal structuring is not strictly required.
 :::
 
 ## Designing
