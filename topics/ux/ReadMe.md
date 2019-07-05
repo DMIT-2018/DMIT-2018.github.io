@@ -179,6 +179,7 @@ public class UserLogin
     - Send profile to BLL
       - `SetupProfile(UserProfile)`
       - throws exception if the profile is already set or if the user does not exist
+      - Updates `Users` table
 
 ```cs
 public class UserProfile
