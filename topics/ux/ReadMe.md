@@ -122,7 +122,7 @@ Notice that the implementation details for *how* the presentation layer methods 
 
 ## Ordering
 
-At this step, the sketch of the form is examined in light of the order of events when the user works with the form. The first event of every form is when the it is first requested. (In ASP.Net Web Form applications, this is the `Page_Load()` event.)
+In this step, the sketch of the form is examined in light of the **order of events** when the user works with the form. The first event of every form is when the it is first requested. (In ASP.Net Web Form applications, this is the `Page_Load()` event.)
 
 Typically, the other interactions to be considered are when the user clicks a button or does some other action that would trigger a call to some background processing on the form.
 
@@ -177,3 +177,5 @@ There are many different ways you can outline this plan. For example, you can us
 The benefit of developing a plan before you start writing code is that it gives you a chance to confirm your general understanding of both the problem and your proposed solution. It allows you to "fact-check" your design and uncover any problems. Additionally, it gives you a set of page mockups that you can run by your end users and client to validate your understanding.
 
 Development plans save you time as a developer, because they reduce the liklihood of you spending time on code that doesn't meet the needs of the user.
+
+The structure of your development plan can vary according to your needs. For some organizations, you may have to follow particular standards in setting up a formal development plan that will be reviewed by other developers or team leads. In other cases, a simple hand-drawn sketch with some bullet point will be enough. Always be sure to learn what is expected in putting together a plan, and don't be surprised when your plans need to change because of new discoveries or requirements.
