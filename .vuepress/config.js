@@ -1,7 +1,7 @@
 module.exports = {
   title: 'DMIT-2018 Student Notes',
   description: 'Intermediate Application Development',
-  markdown: {
+  extendMarkdown(md) {
     config: md => {
       md.set({ breaks: true })
       md.use(require('markdown-it-imsize'))
@@ -27,7 +27,7 @@ module.exports = {
       { text: 'Take Home', link: '/exercises/'},
       { text: 'Issues/Bugs', link: 'https://github.com/DMIT-2018/StudentNotes/issues/new' },
       { text: 'Moodle', link: 'https://moodle.nait.ca' },
-],
+    ],
     sidebar: {
       '/about/': [
         '',
@@ -212,5 +212,14 @@ module.exports = {
         'about/'
       ]
     }
+  },
+  plugins: {
+    '@vuewpress/pwa': {
+      serviceWorker: true,
+      updatePopup: true
+    },
+    '@vuepress/active-header-links': { },
+    '@vuepress/back-to-top': { },
+    '@vuepress/last-updated': { }
   }
 }
