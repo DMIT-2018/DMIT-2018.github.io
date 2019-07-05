@@ -155,6 +155,14 @@ There are many different ways you can outline this plan. For example, you can us
       - returns `true` if user needs to set up profile
       - throws an exception if the login fails
 
+```cs
+public class UserLogin
+{
+    public string UserName { get; set; }
+    public string Password { get; set; }
+}
+```
+
 ### User Profile Form
 
 ![Profile Setup Form](./UserProfile.png)
@@ -171,6 +179,18 @@ There are many different ways you can outline this plan. For example, you can us
     - Send profile to BLL
       - `SetupProfile(UserProfile)`
       - throws exception if the profile is already set or if the user does not exist
+
+```cs
+public class UserProfile
+{
+    public string UserName { get; set; }
+    public string Password { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+}
+```
+
+----
 
 ## Summary
 
