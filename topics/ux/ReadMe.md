@@ -17,7 +17,7 @@ When it comes to *designing* the parts of an application that allow users to wor
 
 How do we accomplish this? What steps should we follow to make this happen? If you are designing within the constraints of an established state-based database as the backing store, let me suggest the following steps:
 
-1. Clarify the requirements by **listing** out the **explicitly mentioned data items**.
+1. Clarify the requirements by **listing** out the **explicitly mentioned data items** in the problem statement.
 1. **Compare** the data items **to the available data** as identified in the ERD.
 1. **Distinguish** between data that has to be ***presented*** to the user **versus** that which has to be ***entered*** by the user.
 1. **Design** a user interface (**user interactions**) that will facilitate presenting and gathering data.
