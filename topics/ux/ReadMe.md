@@ -7,7 +7,7 @@ UX (or *U*ser e*X*perience) is fundamentally about giving the user a pleasant ex
 
 ## UX Data-Driven Applications
 
-A data-driven application is simply a program that is supported by a database for back-end storage of information. Storing and retrieving information with a database is all about CRUD - making sure that way we handle information in storage will ensure the general integrity of the data (i.e.: that regular maintenance of the data will not inadvertantly corrupt it). But how information is *packaged* for storage (i.e. - normalized into related tables) is entirely different from how it is *unpacked*, *used* and *moved* around in the application (i.e. - DTOs, POCOs, etc.).
+A data-driven application is simply a program that is supported by a database for back-end storage of information. Storing and retrieving information in a database is all about CRUD - making sure that way we handle information in storage will ensure the general integrity of the data (i.e.: that regular maintenance of the data will not inadvertantly corrupt it). But how information is *packaged* for storage (i.e. - normalized into related tables) is entirely different from how it is *unpacked*, *used* and *moved* around in the application (i.e. - DTOs, POCOs, etc.).
 
 In building data-driven applications, it's important to consider how the data is going to be *displayed to* and *used by* the end-user. Remember, the database is designed to work well for data **storage**, not presentation. It's not unusual for the *shape* or structure of the data to appear differently in a user interface than how it is structured for data storage.
 
