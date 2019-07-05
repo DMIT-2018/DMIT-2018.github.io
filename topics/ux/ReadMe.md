@@ -67,7 +67,7 @@ NOTE: These distinctions between displaying and entering data fit in nicely with
 
 ### Designing
 
-Sketching out a user interface at this stage is helpful in visualizing what the user will be working with. During this step, it's possible that other information from the database might be helpful for the user to see.
+Sketching out a user interface at this stage is helpful in visualizing what the user will be working with. During this step, it's possible that other information from the database might be needed by the user in order for them to complete their task, and that information should be included in the design.
 
 Looking once again at the login form requirements, a simple sketch of the main component would look like this:
 
