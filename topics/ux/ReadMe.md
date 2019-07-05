@@ -86,7 +86,7 @@ Modeling the data into classes helps to group related information so that it can
 
 For example, a `UserLogin` class could be created to hold the login information that will be sent to the BLL.
 
-```cs
+```csharp
 public class UserLogin
 {
     public string UserName { get; set; }
@@ -96,13 +96,13 @@ public class UserLogin
 
 The BLL class would have a method to process the login:
 
-```cs
+```csharp
 public bool ValidateLogin(UserLogin signin) {}
 ```
 
 Likewise, the data from the user profile form could be packaged into a class to send into the BLL as a first-time setup.
 
-```cs
+```csharp
 public class UserProfile
 {
     public string UserName { get; set; }
@@ -114,7 +114,7 @@ public class UserProfile
 
 and the BLL method could be
 
-```cs
+```csharp
 public void SetupProfile(UserProfile info) {}
 ```
 
@@ -155,7 +155,7 @@ There are many different ways you can outline this plan. For example, you can us
       - returns `true` if user needs to set up profile
       - throws an exception if the login fails
 
-```cs
+```csharp
 public class UserLogin
 {
     public string UserName { get; set; }
@@ -181,7 +181,7 @@ public class UserLogin
       - throws exception if the profile is already set or if the user does not exist
       - Updates `Users` table
 
-```cs
+```csharp
 public class UserProfile
 {
     public string UserName { get; set; }
