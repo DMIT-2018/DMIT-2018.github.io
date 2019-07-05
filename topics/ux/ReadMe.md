@@ -18,8 +18,8 @@ When it comes to *designing* the parts of an application that allow users to wor
 How do we accomplish this? What steps should we follow to make this happen? If you are designing within the constraints of an established state-based database as the backing store, let me suggest the following steps:
 
 1. Clarify the requirements by **listing** out the **explicitly mentioned data items** in the problem statement.
-1. **Compare** the data items **to the available data** as identified in the ERD.
-1. **Distinguish** between data that has to be ***presented*** to the user **versus** that which has to be ***entered*** by the user.
+1. **Compare** the problem statement's data items **to the stored data structure** as identified by the ERD.
+1. **Distinguish** between data that has to be ***presented to*** the user **versus** that which has to be ***entered by*** the user.
 1. **Design** a user interface (**user interactions**) that will facilitate presenting and gathering data.
 1. Generate DTO/POCO classes to **model the data** that will be exchanged between the BLL and the Presentation Layer. You can also **model the BLL methods** that will be used, effectively providing a "contract" between the PL and BLL.
 1. Determine the **order of events** that will allow the user to see what they need to know and enter what we need to gather.
