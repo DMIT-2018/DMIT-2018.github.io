@@ -7,9 +7,7 @@ title: CQRS, POCOs, and DTOs
 
 The presentation of CQRS in this overview is really a gross oversimplification of what CQRS is all about and how to achieve it.
 
-"True" CQRS is part of the Domain Driven Design (DDD) approach to development, and is acheived by using its principles alongside DI and other SOLID principles.
-
-As a result, full-scale CQRS will involve creating separate classes for Commands and Queries along with using interfaces. In this course, the discussion around CQRS is limited to how CQRS thinking impacts the design of our DTOs and POCOs.
+"True" CQRS is often seen in the development of microservices or in applying a Domain Driven Design (DDD) approach to development. It's not uncommon to see CQRS used with some kind of message bus and dependency injection (DI) framework. As a result, full-scale CQRS would involve creating separate classes for Commands and Queries. In this course, the discussion around CQRS is limited to how CQRS thinking impacts the design of our DTOs and POCOs.
 
 For a more "canonical" description, take a look at [Martin Fowler's article](http://martinfowler.com/bliki/CQRS.html) on it dated July 14, 2011. Or, for a Microsoft take on it, look at their article on the [CQRS Journey](http://msdn.microsoft.com/en-us/library/jj554200.aspx) in their Patterns & Practices section of MSDN. There's even a site with a multi-part tutorial on getting started with CQRS using ASP.Net MVC at [CQRS.nu](http://cqrs.nu/).
 
