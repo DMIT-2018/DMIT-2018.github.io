@@ -40,8 +40,8 @@ title: LOGs
 
 ## Entity Framework (EF6)
 
-- Entities
-  - Knowledge
+- Knowledge
+  - Entities
     - Define the terms Entity, CBO, DTO, and POCO
     - Describe what is meant by 'Code First' development in EF
     - Describe the role of attributes on Entity classes and their properties
@@ -49,25 +49,23 @@ title: LOGs
     - Distinguish between validation attributes and attributes that describe table/column characteristics
     - Describe what is meant by a "navigation property" in Entity Framework
     - Define the term "Object Graph" and how it relates to an Entity model that uses navigation properties
-  - Skill
-    - Create Entity classes for use with Entity Framework (EF)
-    - Apply attributes to entities to identify primary keys for EF
-
-    - Use Entity Framework to write code-first database models in C#
-    - Create entity classes that represent/model the structure of database tables, using appropriate attributes and navigation properties
-- DAL Class
-  - Knowledge
+  - DAL Class
     - Describe the role of a DbContext class in EF
     - Describe how to customize the database model of your `DbContext` class by overrideing the `OnModelCreating()` method
-  - Skill
+- Skill
+  - Entities
+    - Create Entity classes for use with Entity Framework (EF)
+    - Create entity classes that represent/model the structure of database tables, using appropriate attributes and navigation properties
+  - DAL Class
     - Create a class that inherits from DbContext to provide access to tables in a database
+    - Create `DbSet<>` properties for a database context class to complete the modeling of database tables
     - Specify a connection string name to be used by a DbContext class through a parameter-less constructor
     - Use Entity Framework Code First as a means of generating a database from a set of Entity classes
     - Disable automatic database initialization for an EF DbContext class by editing the web.config
+    - Generate a database context and entity classes from an existing database
+  - BLL
     - Query a database using LINQ and Entity Framework
     - Add, Remove and Update information in a database using Entity Framework
-    - Create a database context class with `DbSet<>` properties based on entity classes to complete the modeling of a database
-    - Generate a database context and entity classes from an existing database
 
 ## Databound Web-Form Controls
 
@@ -139,3 +137,4 @@ title: LOGs
 - Identify common third-party authentication sources
 - Explain the benefits of using third-party authentication
 - Explain why authorization is always an application-specific concern
+- Implement user-account based security in an ASP.Net application
