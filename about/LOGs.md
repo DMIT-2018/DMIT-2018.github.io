@@ -11,12 +11,13 @@ title: LOGs
 
 ## DVCS - Git Basics
 
-- Identify the main parts of the GitHub Desktop program
-- Create a new repository through GitHub Desktop
-- Create a new repository through the browser on GitHub.com
 - Define the terms CVCS and DVCS
 - List two examples of a Distributed Version Control System
-- List and describe key git commands
+- Create a new repository through the browser on GitHub.com
+- Install and configure GitKraken to use with GitHub.com
+- Identify the main parts of the GitKraken program
+- Create a new repository through GitKraken
+- List and describe key git commands that can be used on the command line
 - Describe the purpose of a .gitignore file
 - Describe the purpose of a .gitattributes file
 - Add files for tracking in git through the git shell
@@ -30,8 +31,12 @@ title: LOGs
 
 - Use a git repository to manage a Visual Studio solution
 - Set up a Visual Studio (VS) solution with an ASP.NET Web Application Project that uses Web Forms with Individual Accounts for authorization
-- Add and reference a class library to an existing VS solution
-- Manage NuGet packages for both projects and solutions
+- Add multiple projects to an existing Visual Studio solution
+- Identify and Set the startup project for a multi-project solution
+- Explain the purpose of the `.vs`folder and the `.sln` file
+- Edit a `.sln` file to ensure the main project will load as the startup program in your Visual Studio solution
+- Add project references between projects in a solution
+- Manage NuGet package references for both projects and solutions
 
 ## Entity Framework (EF6)
 
@@ -45,7 +50,7 @@ title: LOGs
     - Distinguish between validation attributes and attributes that describe table/column characteristics
     - Apply attributes to entities to identify primary keys for EF
     - Describe what is meant by a "navigation property" in Entity Framework
-    - Define the term "Object Graph" and how it relates to an Entity model that uses navigation properties
+    - Define the term "Object Graph" and how it relates to an Entity model that includes navigational properties
     - Create entity classes that represent/model the structure of database tables, using appropriate attributes and navigation properties
 - DAL Class
     - Describe the role of a DbContext class in EF
