@@ -32,16 +32,6 @@ To complete this course, it is recommended that you install the following softwa
 - [Draw.io](https://about.draw.io/integrations/#integrations_offline)
 - Azure SDK (optional)
 
-## Reporting Bugs
-
-Report bugs/errors at this [issue tracker](https://github.com/DMIT-2018/StudentNotes/issues/new). When reporting errors, please identify the complete URL of the page and quote the portion of the page that has the error.
-
-### Version 1.0.0
-
-**Upcoming Builds:**
-
-- TBA
-
 ## Common Lab Configuration
 
 Labs are configured to make use of the following development software for this course:
