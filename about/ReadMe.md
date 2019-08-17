@@ -43,3 +43,7 @@ Labs are configured to make use of the following development software for this c
 ## Authors
 
 This site is currently being authored by **Dan Gilleland** and **Don Welch**. All materials herein are © NAIT as part of the **Digital Media and IT** program of studies.
+
+## Colophon
+
+This site is hosted on GitHub Pages and built with [VuePress 1.x](https://v1.vuepress.vuejs.org/). Continuous Deployment (CD) is performed via [Travis-CI](https://travis-ci.org/DMIT-1508/DMIT-1508.github.io).
