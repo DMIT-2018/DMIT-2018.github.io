@@ -3,6 +3,8 @@ title: LOGs
 ---
 # Learning Outcome Guides (*LOGs*)
 
+The Learning Outcomes here build upon what you've learned in [CPSC-1517](https://cpsc-1517.github.io/logs/) and [DMIT-1508](https://dmit-1508.github.io/about/LOGs.html). Take some time to review those outcomes before continuing with the material in this course.
+
 > ***At the end of each topic, you should be able to** do the items listed for the topic.*
 
 ## Course Introduction
