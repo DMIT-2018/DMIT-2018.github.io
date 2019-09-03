@@ -14,9 +14,8 @@ title: LOGs
 - Define the terms CVCS and DVCS
 - List two examples of a Distributed Version Control System
 - Create a new repository through the browser on GitHub.com
-- Install and configure GitKraken to use with GitHub.com
-- Identify the main parts of the GitKraken program
-- Create a new repository through GitKraken
+- Install, configure, and identify the parts in a GUI tool to use with GitHub.com
+- Use a GUI tool to manage a git repository
 - List and describe key git commands that can be used on the command line
 - Describe the purpose of a .gitignore file
 - Describe the purpose of a .gitattributes file
@@ -26,6 +25,8 @@ title: LOGs
 - Synchronize a local repository with a remote repository
 - Define the terms Clone and Fork as they apply to git and GitHub
 - Define the terms Orgin and Upstream as they apply to cloned/forked repositories
+- Define the terms Branch and Merge as they apply to git
+- Describe the "Git Flow" approach to using a git repository
 
 ## Project Setup
 
