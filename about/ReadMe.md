@@ -18,17 +18,15 @@ This site contains numerous examples and information that is available primarily
 
 ## Software
 
-To complete this course, it is recommended that you install the following software on your personal computer to work outside of the school computer labs (assuming a Windows 7 OS as minimum):
+To complete this course, it is recommended that you install the following software on your personal computer to work outside of the school computer labs (assuming a Windows 10 OS as minimum):
 
-- Visual Studio 2017 (Professional or Ultimate), with the following extensions: <br />*Note: After installing these extensions, be sure that they are up-to-date. Your instructor will give you information on how to do this in class.*
-  - VS2017 Update 4 or higher
-  - Web Essentials 2017
-  - SQL Server Data Tools
-  - xUnit (optional)
+- Visual Studio 2019 Community Edition, with the following extensions: <br />*Note: After installing these extensions, be sure that they are up-to-date. Your instructor will give you information on how to do this in class.*
+  - VS2019 or higher
+  - [Web Essentials 2019](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebEssentials2019)
 - SQL Server 2017, Developer Edition
   - [This slideshow](https://dmit-2018.github.io/about/slides-installing-sql-server.html) shows the important parts of installing SQL Server 2017.
 - GitHub Desktop
-- LinqPad
+- [LinqPad](https://www.linqpad.net/)
 - [Draw.io](https://about.draw.io/integrations/#integrations_offline)
 - Azure SDK (optional)
 
@@ -36,8 +34,8 @@ To complete this course, it is recommended that you install the following softwa
 
 Labs are configured to make use of the following development software for this course:
 
-- Visual Studio 2017
-- SQL Server 2016, Developer Edition
+- Visual Studio 2019
+- SQL Server 2017, Developer Edition
 - LinqPad
 
 ## Authors
