@@ -39,11 +39,11 @@ module.exports = {
       ],
       '/exercises/' :[
         '',
-        'dvcs',
+        // 'dvcs',
         // page w. link to conflict resolution github repo
-        'ef',
-        'linq',
-        'oltp' 
+        // 'ef',
+        // 'linq',
+        // 'oltp' 
       ],
 
       '/topics/': [
