@@ -43,7 +43,8 @@ module.exports = {
         // page w. link to conflict resolution github repo
         'ef',
         'linq',
-        // 'oltp' 
+        // 'planning',
+        // 'oltp'
       ],
 
       '/topics/': [
