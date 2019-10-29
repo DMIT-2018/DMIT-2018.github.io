@@ -35,5 +35,5 @@ Picker id would normally be obtainted from the user login via security coding. T
 
 The clerk will be recording the data from a picking sheet, returned by the picker after the picker has done the customer shopping. The clerk will need to fetch the customer order currently on the database. The picking sheet will have the order number printed on the top. Show the customer name and contact phone number which is also at the top of the picking sheet.
 
-The current customer order will be list the product description, ordered quantity, customer order comment along with area to enter the actual quantity picked and any picking issue. A picking issue could be something such as "Out of Stock" which would results in a picked qty of 0 (zero).
+The current customer order will be list the product description, ordered quantity, customer order comment along with an area to enter the actual quantity picked and any picking issue. A picking issue could be something such as "Out of Stock" which would results in a picked qty of 0 (zero).
 
