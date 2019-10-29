@@ -3,7 +3,7 @@ title: OLTP Planning
 ---
 # OLTP Planning Exercise (3 Marks)
 
-- [ ] Redo for a UI/Development Planning exercise
+> This exerxise is for designing/planning the development of your application supporting a user interface with OLTP backing. You will **not** be creating any code in your application; your focus is to be on *planning* your development.
 
 ## Private GitHub Repo Only
 
