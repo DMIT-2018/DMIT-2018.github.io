@@ -3,7 +3,7 @@ title: OLTP Planning
 ---
 # OLTP Planning Exercise (3 Marks)
 
-> This exerxise is for designing/planning the development of your application supporting a user interface with OLTP backing. You will **not** be creating any code in your application; your focus is to be on *planning* your development.
+> This exercise is for designing/planning the development of your application supporting a user interface with OLTP backing. You will **not** be creating any code in your application; your focus is to be on *planning* your development.
 
 ## Private GitHub Repo Only
 
@@ -35,5 +35,5 @@ Picker id would normally be obtainted from the user login via security coding. T
 
 The clerk will be recording the data from a picking sheet, returned by the picker after the picker has done the customer shopping. The clerk will need to fetch the customer order currently on the database. The picking sheet will have the order number printed on the top. Show the customer name and contact phone number which is also at the top of the picking sheet.
 
-The current customer order will be list the product description, ordered quantity, customer order comment along with an area to enter the actual quantity picked and any picking issue. A picking issue could be something such as "Out of Stock" which would results in a picked qty of 0 (zero).
+The current customer order will list the product description, ordered quantity, customer order comment along with an area to enter the actual quantity picked and any picking issue. A picking issue could be something such as "Out of Stock" which would results in a picked qty of 0 (zero).
 
