@@ -13,6 +13,8 @@ Be aware that this is the continuation of the GroceryList exercises - you must b
 
 No additional resources have been supplied.
 
+> **Note:** If you are using [Draw.io](https://Draw.io) as your tool for creating screen mockups, you may be interested in the following [Getting Started Demo](https://www.draw.io/?&p=exlightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=draw.io%20Minimal%20Tutorial%20english#Uhttps%3A%2F%2Fdrive.google.com%2Fa%2Fseibert-media.net%2Fuc%3Fid%3D11mkgiFO4IR8uTerSUZ6ywcSpSP_iqOLC%26export%3Ddownload) to learn how to use the tool. Draw.io has shapes for *Mockups* that are suitable for this exercise.
+
 ### GroceryList ERD
 
 ![GroceryList ERD](./oltp/grocerylist_erd.png)
