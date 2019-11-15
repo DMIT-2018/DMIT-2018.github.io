@@ -44,7 +44,7 @@ module.exports = {
         'ef',
         'linq',
         'planning',
-        // 'oltp'
+        'oltp'
       ],
 
       '/topics/': [
