@@ -24,7 +24,7 @@ module.exports = {
       { text: 'Demos', link: '/demos/' },
       // { text: 'Lab Specs', link: 'https://DMIT-2018.github.io/LabSpecs' },
       { text: 'MS SQL 2017', link: 'https://dmit-2018.github.io/about/slides-installing-sql-server.html' },
-      { text: 'Take Home', link: '/exercises/'},
+//      { text: 'Take Home', link: '/exercises/'},
       { text: 'Issues/Bugs', link: 'https://github.com/DMIT-2018/DMIT-2018.github.io/issues/new' },
       { text: 'Moodle', link: 'https://moodle.nait.ca' },
     ],
@@ -39,12 +39,12 @@ module.exports = {
       ],
       '/exercises/' :[
         '',
-        'dvcs',
+//        'dvcs',
         // page w. link to conflict resolution github repo
-        'ef',
-        'linq',
-        'planning',
-        'oltp'
+//        'ef',
+//        'linq',
+//        'planning',
+//        'oltp'
       ],
 
       '/topics/': [
