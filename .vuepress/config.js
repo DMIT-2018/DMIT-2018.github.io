@@ -43,7 +43,7 @@ module.exports = {
 //        'dvcs',
         // page w. link to conflict resolution github repo
 //        'ef',
-        'WorkSchedule/Linq',
+        'WorkSchedule/Linq/',
 //        'planning',
 //        'oltp'
       ],
