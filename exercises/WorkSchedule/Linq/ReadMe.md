@@ -26,7 +26,7 @@ This exercise is based on the Work Schedule database. For this exercise, provide
 
     ![Employees with top years experience](./q5.png)
 
-1. List the names of all employees who did not work in November. Show the name in the format of "LastName, FirstName" and sort it by last name and then first name.
+1. List the names of all employees who did not work in January. Show the name in the format of "LastName, FirstName" and sort it by last name and then first name.
 
     ![Employees who did not work in November](./new_q7.png)
 
