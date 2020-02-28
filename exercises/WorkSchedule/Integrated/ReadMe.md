@@ -59,7 +59,7 @@ The following images can be used as photos for the client contacts.
 
 ![Phase 2](./ContractEditor-2.png)
 
-The selection of a client from the previous phase should, in this phase, trigger the population of a GridView to list the active contracts for the client. Note also that it should trigger the visibility of a button for creating a new contract. As in the previous phase, when the user selects the prompting text of the drop-down, these controls should be cleared/hidden. You can use the `table` and `table-hover` styles on the GridView.
+The selection of a client from the previous phase should, in this phase, trigger the population of a GridView to list the active contracts for the client. An active contract is one whose End Date is in the future. Note also that it should trigger the visibility of a button for creating a new contract. As in the previous phase, when the user selects the prompting text of the drop-down, these controls should be cleared/hidden. You can use the `table` and `table-hover` styles on the GridView.
 
 ----
 
