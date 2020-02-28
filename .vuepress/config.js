@@ -40,6 +40,7 @@ module.exports = {
       '/exercises/' :[
         '',
         'WorkSchedule/EntityFramework/',
+        'WorkSchedule/Integrated/',
 //        'dvcs',
         // page w. link to conflict resolution github repo
 //        'ef',
