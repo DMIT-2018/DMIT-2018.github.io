@@ -45,6 +45,7 @@ module.exports = {
 //        'ef',
         'WorkSchedule/Linq/',
         'WorkSchedule/Integrated/',
+        'WorkSchedule/ImplementationPlan/',
 //        'planning',
 //        'oltp'
       ],
