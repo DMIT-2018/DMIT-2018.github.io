@@ -131,3 +131,34 @@ Note also that a change in the Client Location drop-down must cause these contro
 ----
 
 ## Phase 5 - Save Contract Transaction (Weight: 5)
+
+In the final phase of developing the Contract Editor page, the data from the form must be gathered and sent to the BLL for processing **as a *single* transaction**. The BLL must validate the user's input and **report all errors in a *single* `BusinessRuleException`** (rather than throwing individual exceptions for each error).
+
+### Validation
+
+Whether this is a new or existing contract, the following validation must be performed.
+
+- Contract Title is required and must be at least five characters long
+- The From/To dates must be in the correct order chronologically
+- The To (contract ending date) date must be in the future
+- For each supplied Skill
+  - The skill must exist in the `Skills` table
+  - Required number of people for each skill is greater than zero and less than five
+
+If this is a new contract, then these validation rules must be applied
+- From date cannot be in the past
+- LocationID must exist in the `Locations` table
+
+If this is an existing contract, then these validation rules must be applied
+- The LocationID matches the one in the existing `PlacementContract`
+- All edits are to be rejected if the placement contract has been cancelled (i.e.: the `Cancellation` date exists for the contract)
+
+> Remember, use a `BusinessRuleExcepton` to gather all errors/problems in the submission, so that they are sent back as a group. 
+
+### Data Processing
+
+For new contracts, insert a new `PlacementContract` with all the skills that were identified for the contract.
+
+For existing contracts, only the start/end dates and the title/requirements can be modified on the `PlacementContract`. **Replace** the existing list of contract skills with the new list of skills that were identified for the contract.
+
+> Remember, the data must be processed as a single transaction.
